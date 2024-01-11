@@ -284,6 +284,7 @@ class OrderItem extends BaseModel implements ModelInterface, ArrayAccess, \JsonS
     const DEEMED_RESELLER_CATEGORY_NZ_VOEC = 'NZ_VOEC';
     const DEEMED_RESELLER_CATEGORY_JE_VOEC = 'JE_VOEC';
     const DEEMED_RESELLER_CATEGORY_CH_SUPPLIER_IMPORT = 'CH_SUPPLIER_IMPORT';
+    const DEEMED_RESELLER_CATEGORY_MY_VOEC = 'MY_VOEC';
     
     
 
@@ -305,6 +306,7 @@ class OrderItem extends BaseModel implements ModelInterface, ArrayAccess, \JsonS
             self::DEEMED_RESELLER_CATEGORY_NZ_VOEC,
             self::DEEMED_RESELLER_CATEGORY_JE_VOEC,
             self::DEEMED_RESELLER_CATEGORY_CH_SUPPLIER_IMPORT,
+            self::DEEMED_RESELLER_CATEGORY_MY_VOEC,
         ];
 
         // This is necessary because Amazon does not consistently capitalize their
