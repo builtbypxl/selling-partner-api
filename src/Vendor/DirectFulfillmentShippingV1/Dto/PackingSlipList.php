@@ -6,15 +6,16 @@ use Crescat\SaloonSdkGenerator\BaseDto;
 
 final class PackingSlipList extends BaseDto
 {
-    protected static array $complexArrayTypes = ['packingSlips' => [PackingSlip::class]];
+	protected static array $complexArrayTypes = ['packingSlips' => [PackingSlip::class]];
 
-    /**
-     * @param  ?Pagination  $pagination
-     * @param  PackingSlip[]  $packingSlips
-     */
-    public function __construct(
-        public readonly ?Pagination $pagination = null,
-        public readonly ?array $packingSlips = null,
-    ) {
-    }
+
+	/**
+	 * @param ?Pagination $pagination
+	 * @param PackingSlip[]|null $packingSlips
+	 */
+	public function __construct(
+		public readonly ?Pagination $pagination = null,
+		public readonly ?array $packingSlips = null,
+	) {
+	}
 }

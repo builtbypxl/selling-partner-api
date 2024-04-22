@@ -6,11 +6,11 @@ use Crescat\SaloonSdkGenerator\BaseDto;
 
 final class DiscountFunding extends BaseDto
 {
-    /**
-     * @param  float[]|null  $percentage  Filters the results to only include offers with the percentage specified.
-     */
-    public function __construct(
-        public readonly ?array $percentage = null,
-    ) {
-    }
+	/**
+	 * @param float[]|null $percentage Filters the results to only include offers with the percentage specified.
+	 */
+	public function __construct(
+		public readonly ?array $percentage = null,
+	) {
+	}
 }

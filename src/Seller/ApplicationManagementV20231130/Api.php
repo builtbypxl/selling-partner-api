@@ -8,10 +8,9 @@ use SellingPartnerApi\Seller\ApplicationManagementV20231130\Requests\RotateAppli
 
 class Api extends BaseResource
 {
-    public function rotateApplicationClientSecret(): Response
-    {
-        $request = new RotateApplicationClientSecret();
-
-        return $this->connector->send($request);
-    }
+	public function rotateApplicationClientSecret(): Response
+	{
+		$request = new RotateApplicationClientSecret();
+		return $this->connector->send($request);
+	}
 }

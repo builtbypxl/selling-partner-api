@@ -16,33 +16,39 @@ use SellingPartnerApi\Vendor\DirectFulfillmentShippingV1\Responses\SubmitShippin
  */
 class SubmitShippingLabelRequest extends Request implements HasBody
 {
-    use HasJsonBody;
+	use HasJsonBody;
 
-    protected Method $method = Method::POST;
+	protected Method $method = Method::POST;
 
-    public function __construct(
-        public SubmitShippingLabelsRequest $submitShippingLabelsRequest,
-    ) {
-    }
 
-    public function resolveEndpoint(): string
-    {
-        return '/vendor/directFulfillment/shipping/v1/shippingLabels';
-    }
+	/**
+	 * @param SubmitShippingLabelsRequest $submitShippingLabelsRequest
+	 */
+	public function __construct(
+		public SubmitShippingLabelsRequest $submitShippingLabelsRequest,
+	) {
+	}
 
-    public function createDtoFromResponse(Response $response): SubmitShippingLabelsResponse
-    {
-        $status = $response->status();
-        $responseCls = match ($status) {
-            202, 400, 403, 404, 413, 415, 429, 500, 503 => SubmitShippingLabelsResponse::class,
-            default => throw new Exception("Unhandled response status: {$status}")
-        };
 
-        return $responseCls::deserialize($response->json(), $responseCls);
-    }
+	public function resolveEndpoint(): string
+	{
+		return "/vendor/directFulfillment/shipping/v1/shippingLabels";
+	}
 
-    public function defaultBody(): array
-    {
-        return $this->submitShippingLabelsRequest->toArray();
-    }
+
+	public function createDtoFromResponse(Response $response): SubmitShippingLabelsResponse
+	{
+		$status = $response->status();
+		$responseCls = match ($status) {
+		    202, 400, 403, 404, 413, 415, 429, 500, 503 => SubmitShippingLabelsResponse::class,
+		    default => throw new Exception("Unhandled response status: {$status}")
+		};
+		return $responseCls::deserialize($response->json(), $responseCls);
+	}
+
+
+	public function defaultBody(): array
+	{
+		return $this->submitShippingLabelsRequest->toArray();
+	}
 }

@@ -6,13 +6,14 @@ use Crescat\SaloonSdkGenerator\BaseResponse;
 
 final class Packages extends BaseResponse
 {
-    protected static array $complexArrayTypes = ['packages' => [Package::class]];
+	protected static array $complexArrayTypes = ['packages' => [Package::class]];
 
-    /**
-     * @param  Package[]  $packages
-     */
-    public function __construct(
-        public readonly array $packages,
-    ) {
-    }
+
+	/**
+	 * @param Package[] $packages
+	 */
+	public function __construct(
+		public readonly array $packages,
+	) {
+	}
 }

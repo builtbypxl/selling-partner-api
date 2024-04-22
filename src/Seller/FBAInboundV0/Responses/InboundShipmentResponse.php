@@ -8,15 +8,16 @@ use SellingPartnerApi\Seller\FBAInboundV0\Dto\InboundShipmentResult;
 
 final class InboundShipmentResponse extends BaseResponse
 {
-    protected static array $complexArrayTypes = ['errors' => [Error::class]];
+	protected static array $complexArrayTypes = ['errors' => [Error::class]];
 
-    /**
-     * @param  ?InboundShipmentResult  $payload
-     * @param  Error[]|null  $errors  A list of error responses returned when a request is unsuccessful.
-     */
-    public function __construct(
-        public readonly ?InboundShipmentResult $payload = null,
-        public readonly ?array $errors = null,
-    ) {
-    }
+
+	/**
+	 * @param ?InboundShipmentResult $payload Result of an inbound shipment operation
+	 * @param Error[]|null $errors A list of error responses returned when a request is unsuccessful.
+	 */
+	public function __construct(
+		public readonly ?InboundShipmentResult $payload = null,
+		public readonly ?array $errors = null,
+	) {
+	}
 }

@@ -6,15 +6,16 @@ use Crescat\SaloonSdkGenerator\BaseDto;
 
 final class CustomerInvoiceList extends BaseDto
 {
-    protected static array $complexArrayTypes = ['customerInvoices' => [CustomerInvoice::class]];
+	protected static array $complexArrayTypes = ['customerInvoices' => [CustomerInvoice::class]];
 
-    /**
-     * @param  ?Pagination  $pagination
-     * @param  CustomerInvoice[]  $customerInvoices
-     */
-    public function __construct(
-        public readonly ?Pagination $pagination = null,
-        public readonly ?array $customerInvoices = null,
-    ) {
-    }
+
+	/**
+	 * @param ?Pagination $pagination
+	 * @param CustomerInvoice[]|null $customerInvoices
+	 */
+	public function __construct(
+		public readonly ?Pagination $pagination = null,
+		public readonly ?array $customerInvoices = null,
+	) {
+	}
 }

@@ -21,84 +21,96 @@ use SellingPartnerApi\Seller\ShippingV1\Requests\RetrieveShippingLabel;
 
 class Api extends BaseResource
 {
-    /**
-     * @param  CreateShipmentRequest  $createShipmentRequest  The request schema for the createShipment operation.
-     */
-    public function createShipment(CreateShipmentRequest $createShipmentRequest): Response
-    {
-        $request = new CreateShipment($createShipmentRequest);
+	/**
+	 * @param CreateShipmentRequest $createShipmentRequest The request schema for the createShipment operation.
+	 */
+	public function createShipment(CreateShipmentRequest $createShipmentRequest): Response
+	{
+		$request = new CreateShipment($createShipmentRequest);
+		return $this->connector->send($request);
+	}
 
-        return $this->connector->send($request);
-    }
 
-    public function getShipment(string $shipmentId): Response
-    {
-        $request = new GetShipment($shipmentId);
+	/**
+	 * @param string $shipmentId
+	 */
+	public function getShipment(string $shipmentId): Response
+	{
+		$request = new GetShipment($shipmentId);
+		return $this->connector->send($request);
+	}
 
-        return $this->connector->send($request);
-    }
 
-    public function cancelShipment(string $shipmentId): Response
-    {
-        $request = new CancelShipment($shipmentId);
+	/**
+	 * @param string $shipmentId
+	 */
+	public function cancelShipment(string $shipmentId): Response
+	{
+		$request = new CancelShipment($shipmentId);
+		return $this->connector->send($request);
+	}
 
-        return $this->connector->send($request);
-    }
 
-    /**
-     * @param  PurchaseLabelsRequest  $purchaseLabelsRequest  The request schema for the purchaseLabels operation.
-     */
-    public function purchaseLabels(string $shipmentId, PurchaseLabelsRequest $purchaseLabelsRequest): Response
-    {
-        $request = new PurchaseLabels($shipmentId, $purchaseLabelsRequest);
+	/**
+	 * @param string $shipmentId
+	 * @param PurchaseLabelsRequest $purchaseLabelsRequest The request schema for the purchaseLabels operation.
+	 */
+	public function purchaseLabels(string $shipmentId, PurchaseLabelsRequest $purchaseLabelsRequest): Response
+	{
+		$request = new PurchaseLabels($shipmentId, $purchaseLabelsRequest);
+		return $this->connector->send($request);
+	}
 
-        return $this->connector->send($request);
-    }
 
-    /**
-     * @param  RetrieveShippingLabelRequest  $retrieveShippingLabelRequest  The request schema for the retrieveShippingLabel operation.
-     */
-    public function retrieveShippingLabel(
-        string $shipmentId,
-        string $trackingId,
-        RetrieveShippingLabelRequest $retrieveShippingLabelRequest,
-    ): Response {
-        $request = new RetrieveShippingLabel($shipmentId, $trackingId, $retrieveShippingLabelRequest);
+	/**
+	 * @param string $shipmentId
+	 * @param string $trackingId
+	 * @param RetrieveShippingLabelRequest $retrieveShippingLabelRequest The request schema for the retrieveShippingLabel operation.
+	 */
+	public function retrieveShippingLabel(
+		string $shipmentId,
+		string $trackingId,
+		RetrieveShippingLabelRequest $retrieveShippingLabelRequest,
+	): Response
+	{
+		$request = new RetrieveShippingLabel($shipmentId, $trackingId, $retrieveShippingLabelRequest);
+		return $this->connector->send($request);
+	}
 
-        return $this->connector->send($request);
-    }
 
-    /**
-     * @param  PurchaseShipmentRequest  $purchaseShipmentRequest  The payload schema for the purchaseShipment operation.
-     */
-    public function purchaseShipment(PurchaseShipmentRequest $purchaseShipmentRequest): Response
-    {
-        $request = new PurchaseShipment($purchaseShipmentRequest);
+	/**
+	 * @param PurchaseShipmentRequest $purchaseShipmentRequest The payload schema for the purchaseShipment operation.
+	 */
+	public function purchaseShipment(PurchaseShipmentRequest $purchaseShipmentRequest): Response
+	{
+		$request = new PurchaseShipment($purchaseShipmentRequest);
+		return $this->connector->send($request);
+	}
 
-        return $this->connector->send($request);
-    }
 
-    /**
-     * @param  GetRatesRequest  $getRatesRequest  The payload schema for the getRates operation.
-     */
-    public function getRates(GetRatesRequest $getRatesRequest): Response
-    {
-        $request = new GetRates($getRatesRequest);
+	/**
+	 * @param GetRatesRequest $getRatesRequest The payload schema for the getRates operation.
+	 */
+	public function getRates(GetRatesRequest $getRatesRequest): Response
+	{
+		$request = new GetRates($getRatesRequest);
+		return $this->connector->send($request);
+	}
 
-        return $this->connector->send($request);
-    }
 
-    public function getAccount(): Response
-    {
-        $request = new GetAccount();
+	public function getAccount(): Response
+	{
+		$request = new GetAccount();
+		return $this->connector->send($request);
+	}
 
-        return $this->connector->send($request);
-    }
 
-    public function getTrackingInformation(string $trackingId): Response
-    {
-        $request = new GetTrackingInformation($trackingId);
-
-        return $this->connector->send($request);
-    }
+	/**
+	 * @param string $trackingId
+	 */
+	public function getTrackingInformation(string $trackingId): Response
+	{
+		$request = new GetTrackingInformation($trackingId);
+		return $this->connector->send($request);
+	}
 }

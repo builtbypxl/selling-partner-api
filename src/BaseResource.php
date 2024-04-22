@@ -4,8 +4,8 @@ namespace SellingPartnerApi;
 
 class BaseResource
 {
-    public function __construct(
-        protected SellingPartnerApi $connector,
-    ) {
-    }
+	public function __construct(
+		protected SellingPartnerApi $connector,
+	) {
+	}
 }

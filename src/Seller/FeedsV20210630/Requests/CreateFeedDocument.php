@@ -17,37 +17,40 @@ use SellingPartnerApi\Seller\FeedsV20210630\Responses\ErrorList;
  */
 class CreateFeedDocument extends Request implements HasBody
 {
-    use HasJsonBody;
+	use HasJsonBody;
 
-    protected Method $method = Method::POST;
+	protected Method $method = Method::POST;
 
-    /**
-     * @param  CreateFeedDocumentSpecification  $createFeedDocumentSpecification  Specifies the content type for the createFeedDocument operation.
-     */
-    public function __construct(
-        public CreateFeedDocumentSpecification $createFeedDocumentSpecification,
-    ) {
-    }
 
-    public function resolveEndpoint(): string
-    {
-        return '/feeds/2021-06-30/documents';
-    }
+	/**
+	 * @param CreateFeedDocumentSpecification $createFeedDocumentSpecification Specifies the content type for the createFeedDocument operation.
+	 */
+	public function __construct(
+		public CreateFeedDocumentSpecification $createFeedDocumentSpecification,
+	) {
+	}
 
-    public function createDtoFromResponse(Response $response): CreateFeedDocumentResponse|ErrorList
-    {
-        $status = $response->status();
-        $responseCls = match ($status) {
-            201 => CreateFeedDocumentResponse::class,
-            400, 403, 404, 413, 415, 429, 500, 503 => ErrorList::class,
-            default => throw new Exception("Unhandled response status: {$status}")
-        };
 
-        return $responseCls::deserialize($response->json(), $responseCls);
-    }
+	public function resolveEndpoint(): string
+	{
+		return "/feeds/2021-06-30/documents";
+	}
 
-    public function defaultBody(): array
-    {
-        return $this->createFeedDocumentSpecification->toArray();
-    }
+
+	public function createDtoFromResponse(Response $response): CreateFeedDocumentResponse|ErrorList
+	{
+		$status = $response->status();
+		$responseCls = match ($status) {
+		    201 => CreateFeedDocumentResponse::class,
+		    400, 403, 404, 413, 415, 429, 500, 503 => ErrorList::class,
+		    default => throw new Exception("Unhandled response status: {$status}")
+		};
+		return $responseCls::deserialize($response->json(), $responseCls);
+	}
+
+
+	public function defaultBody(): array
+	{
+		return $this->createFeedDocumentSpecification->toArray();
+	}
 }

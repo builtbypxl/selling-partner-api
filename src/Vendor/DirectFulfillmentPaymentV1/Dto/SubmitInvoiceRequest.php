@@ -6,13 +6,14 @@ use Crescat\SaloonSdkGenerator\BaseDto;
 
 final class SubmitInvoiceRequest extends BaseDto
 {
-    protected static array $complexArrayTypes = ['invoices' => [InvoiceDetail::class]];
+	protected static array $complexArrayTypes = ['invoices' => [InvoiceDetail::class]];
 
-    /**
-     * @param  InvoiceDetail[]  $invoices
-     */
-    public function __construct(
-        public readonly ?array $invoices = null,
-    ) {
-    }
+
+	/**
+	 * @param InvoiceDetail[]|null $invoices
+	 */
+	public function __construct(
+		public readonly ?array $invoices = null,
+	) {
+	}
 }

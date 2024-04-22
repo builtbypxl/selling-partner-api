@@ -13,21 +13,22 @@ use SellingPartnerApi\Seller\SellersV1\Responses\GetMarketplaceParticipationsRes
  */
 class GetMarketplaceParticipations extends Request
 {
-    protected Method $method = Method::GET;
+	protected Method $method = Method::GET;
 
-    public function resolveEndpoint(): string
-    {
-        return '/sellers/v1/marketplaceParticipations';
-    }
 
-    public function createDtoFromResponse(Response $response): GetMarketplaceParticipationsResponse
-    {
-        $status = $response->status();
-        $responseCls = match ($status) {
-            200, 400, 403, 404, 413, 415, 429, 500, 503 => GetMarketplaceParticipationsResponse::class,
-            default => throw new Exception("Unhandled response status: {$status}")
-        };
+	public function resolveEndpoint(): string
+	{
+		return "/sellers/v1/marketplaceParticipations";
+	}
 
-        return $responseCls::deserialize($response->json(), $responseCls);
-    }
+
+	public function createDtoFromResponse(Response $response): GetMarketplaceParticipationsResponse
+	{
+		$status = $response->status();
+		$responseCls = match ($status) {
+		    200, 400, 403, 404, 413, 415, 429, 500, 503 => GetMarketplaceParticipationsResponse::class,
+		    default => throw new Exception("Unhandled response status: {$status}")
+		};
+		return $responseCls::deserialize($response->json(), $responseCls);
+	}
 }

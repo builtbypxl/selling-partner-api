@@ -6,13 +6,13 @@ use Crescat\SaloonSdkGenerator\BaseDto;
 
 final class FeaturedOfferSegment extends BaseDto
 {
-    /**
-     * @param  string  $customerMembership  The customer membership type that make up this segment
-     * @param  SegmentDetails  $segmentDetails  The details about the segment.
-     */
-    public function __construct(
-        public readonly string $customerMembership,
-        public readonly SegmentDetails $segmentDetails,
-    ) {
-    }
+	/**
+	 * @param string $customerMembership The customer membership type that make up this segment
+	 * @param SegmentDetails $segmentDetails The details about the segment.
+	 */
+	public function __construct(
+		public readonly string $customerMembership,
+		public readonly SegmentDetails $segmentDetails,
+	) {
+	}
 }

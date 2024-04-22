@@ -17,37 +17,40 @@ use SellingPartnerApi\Seller\FeedsV20210630\Responses\ErrorList;
  */
 class CreateFeed extends Request implements HasBody
 {
-    use HasJsonBody;
+	use HasJsonBody;
 
-    protected Method $method = Method::POST;
+	protected Method $method = Method::POST;
 
-    /**
-     * @param  CreateFeedSpecification  $createFeedSpecification  Information required to create the feed.
-     */
-    public function __construct(
-        public CreateFeedSpecification $createFeedSpecification,
-    ) {
-    }
 
-    public function resolveEndpoint(): string
-    {
-        return '/feeds/2021-06-30/feeds';
-    }
+	/**
+	 * @param CreateFeedSpecification $createFeedSpecification Information required to create the feed.
+	 */
+	public function __construct(
+		public CreateFeedSpecification $createFeedSpecification,
+	) {
+	}
 
-    public function createDtoFromResponse(Response $response): CreateFeedResponse|ErrorList
-    {
-        $status = $response->status();
-        $responseCls = match ($status) {
-            202 => CreateFeedResponse::class,
-            400, 401, 403, 404, 415, 429, 500, 503 => ErrorList::class,
-            default => throw new Exception("Unhandled response status: {$status}")
-        };
 
-        return $responseCls::deserialize($response->json(), $responseCls);
-    }
+	public function resolveEndpoint(): string
+	{
+		return "/feeds/2021-06-30/feeds";
+	}
 
-    public function defaultBody(): array
-    {
-        return $this->createFeedSpecification->toArray();
-    }
+
+	public function createDtoFromResponse(Response $response): CreateFeedResponse|ErrorList
+	{
+		$status = $response->status();
+		$responseCls = match ($status) {
+		    202 => CreateFeedResponse::class,
+		    400, 401, 403, 404, 415, 429, 500, 503 => ErrorList::class,
+		    default => throw new Exception("Unhandled response status: {$status}")
+		};
+		return $responseCls::deserialize($response->json(), $responseCls);
+	}
+
+
+	public function defaultBody(): array
+	{
+		return $this->createFeedSpecification->toArray();
+	}
 }

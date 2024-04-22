@@ -14,41 +14,44 @@ use SellingPartnerApi\Seller\CatalogItemsV20201201\Responses\Item;
  */
 class GetCatalogItem extends Request
 {
-    protected Method $method = Method::GET;
+	protected Method $method = Method::GET;
 
-    /**
-     * @param  string  $asin  The Amazon Standard Identification Number (ASIN) of the item.
-     * @param  array  $marketplaceIds  A comma-delimited list of Amazon marketplace identifiers. Data sets in the response contain data only for the specified marketplaces.
-     * @param  ?array  $includedData  A comma-delimited list of data sets to include in the response. Default: summaries.
-     * @param  ?string  $locale  Locale for retrieving localized summaries. Defaults to the primary locale of the marketplace.
-     */
-    public function __construct(
-        protected string $asin,
-        protected array $marketplaceIds,
-        protected ?array $includedData = null,
-        protected ?string $locale = null,
-    ) {
-    }
 
-    public function defaultQuery(): array
-    {
-        return array_filter(['marketplaceIds' => $this->marketplaceIds, 'includedData' => $this->includedData, 'locale' => $this->locale]);
-    }
+	/**
+	 * @param string $asin The Amazon Standard Identification Number (ASIN) of the item.
+	 * @param array $marketplaceIds A comma-delimited list of Amazon marketplace identifiers. Data sets in the response contain data only for the specified marketplaces.
+	 * @param ?array $includedData A comma-delimited list of data sets to include in the response. Default: summaries.
+	 * @param ?string $locale Locale for retrieving localized summaries. Defaults to the primary locale of the marketplace.
+	 */
+	public function __construct(
+		protected string $asin,
+		protected array $marketplaceIds,
+		protected ?array $includedData = null,
+		protected ?string $locale = null,
+	) {
+	}
 
-    public function resolveEndpoint(): string
-    {
-        return "/catalog/2020-12-01/items/{$this->asin}";
-    }
 
-    public function createDtoFromResponse(Response $response): Item|ErrorList
-    {
-        $status = $response->status();
-        $responseCls = match ($status) {
-            200 => Item::class,
-            400, 403, 404, 413, 415, 429, 500, 503 => ErrorList::class,
-            default => throw new Exception("Unhandled response status: {$status}")
-        };
+	public function defaultQuery(): array
+	{
+		return array_filter(['marketplaceIds' => $this->marketplaceIds, 'includedData' => $this->includedData, 'locale' => $this->locale]);
+	}
 
-        return $responseCls::deserialize($response->json(), $responseCls);
-    }
+
+	public function resolveEndpoint(): string
+	{
+		return "/catalog/2020-12-01/items/{$this->asin}";
+	}
+
+
+	public function createDtoFromResponse(Response $response): Item|ErrorList
+	{
+		$status = $response->status();
+		$responseCls = match ($status) {
+		    200 => Item::class,
+		    400, 403, 404, 413, 415, 429, 500, 503 => ErrorList::class,
+		    default => throw new Exception("Unhandled response status: {$status}")
+		};
+		return $responseCls::deserialize($response->json(), $responseCls);
+	}
 }

@@ -17,37 +17,40 @@ use SellingPartnerApi\Seller\ProductPricingV20220501\Responses\Errors;
  */
 class GetCompetitiveSummary extends Request implements HasBody
 {
-    use HasJsonBody;
+	use HasJsonBody;
 
-    protected Method $method = Method::POST;
+	protected Method $method = Method::POST;
 
-    /**
-     * @param  CompetitiveSummaryBatchRequest  $competitiveSummaryBatchRequest  The `competitiveSummary` batch request data.
-     */
-    public function __construct(
-        public CompetitiveSummaryBatchRequest $competitiveSummaryBatchRequest,
-    ) {
-    }
 
-    public function resolveEndpoint(): string
-    {
-        return '/batches/products/pricing/2022-05-01/items/competitiveSummary';
-    }
+	/**
+	 * @param CompetitiveSummaryBatchRequest $competitiveSummaryBatchRequest The `competitiveSummary` batch request data.
+	 */
+	public function __construct(
+		public CompetitiveSummaryBatchRequest $competitiveSummaryBatchRequest,
+	) {
+	}
 
-    public function createDtoFromResponse(Response $response): CompetitiveSummaryBatchResponse|Errors
-    {
-        $status = $response->status();
-        $responseCls = match ($status) {
-            200 => CompetitiveSummaryBatchResponse::class,
-            400, 403, 404, 429, 500, 503 => Errors::class,
-            default => throw new Exception("Unhandled response status: {$status}")
-        };
 
-        return $responseCls::deserialize($response->json(), $responseCls);
-    }
+	public function resolveEndpoint(): string
+	{
+		return "/batches/products/pricing/2022-05-01/items/competitiveSummary";
+	}
 
-    public function defaultBody(): array
-    {
-        return $this->competitiveSummaryBatchRequest->toArray();
-    }
+
+	public function createDtoFromResponse(Response $response): CompetitiveSummaryBatchResponse|Errors
+	{
+		$status = $response->status();
+		$responseCls = match ($status) {
+		    200 => CompetitiveSummaryBatchResponse::class,
+		    400, 403, 404, 429, 500, 503 => Errors::class,
+		    default => throw new Exception("Unhandled response status: {$status}")
+		};
+		return $responseCls::deserialize($response->json(), $responseCls);
+	}
+
+
+	public function defaultBody(): array
+	{
+		return $this->competitiveSummaryBatchRequest->toArray();
+	}
 }

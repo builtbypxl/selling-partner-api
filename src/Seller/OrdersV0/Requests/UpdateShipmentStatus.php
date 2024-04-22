@@ -17,39 +17,42 @@ use SellingPartnerApi\Seller\OrdersV0\Responses\UpdateShipmentStatusErrorRespons
  */
 class UpdateShipmentStatus extends Request implements HasBody
 {
-    use HasJsonBody;
+	use HasJsonBody;
 
-    protected Method $method = Method::POST;
+	protected Method $method = Method::POST;
 
-    /**
-     * @param  string  $orderId  An Amazon-defined order identifier, in 3-7-7 format.
-     * @param  UpdateShipmentStatusRequest  $updateShipmentStatusRequest  The request body for the updateShipmentStatus operation.
-     */
-    public function __construct(
-        protected string $orderId,
-        public UpdateShipmentStatusRequest $updateShipmentStatusRequest,
-    ) {
-    }
 
-    public function resolveEndpoint(): string
-    {
-        return "/orders/v0/orders/{$this->orderId}/shipment";
-    }
+	/**
+	 * @param string $orderId An Amazon-defined order identifier, in 3-7-7 format.
+	 * @param UpdateShipmentStatusRequest $updateShipmentStatusRequest The request body for the updateShipmentStatus operation.
+	 */
+	public function __construct(
+		protected string $orderId,
+		public UpdateShipmentStatusRequest $updateShipmentStatusRequest,
+	) {
+	}
 
-    public function createDtoFromResponse(Response $response): EmptyResponse|UpdateShipmentStatusErrorResponse
-    {
-        $status = $response->status();
-        $responseCls = match ($status) {
-            204 => EmptyResponse::class,
-            400, 403, 404, 413, 415, 429, 500, 503 => UpdateShipmentStatusErrorResponse::class,
-            default => throw new Exception("Unhandled response status: {$status}")
-        };
 
-        return $responseCls::deserialize($response->json(), $responseCls);
-    }
+	public function resolveEndpoint(): string
+	{
+		return "/orders/v0/orders/{$this->orderId}/shipment";
+	}
 
-    public function defaultBody(): array
-    {
-        return $this->updateShipmentStatusRequest->toArray();
-    }
+
+	public function createDtoFromResponse(Response $response): EmptyResponse|UpdateShipmentStatusErrorResponse
+	{
+		$status = $response->status();
+		$responseCls = match ($status) {
+		    204 => EmptyResponse::class,
+		    400, 403, 404, 413, 415, 429, 500, 503 => UpdateShipmentStatusErrorResponse::class,
+		    default => throw new Exception("Unhandled response status: {$status}")
+		};
+		return $responseCls::deserialize($response->json(), $responseCls);
+	}
+
+
+	public function defaultBody(): array
+	{
+		return $this->updateShipmentStatusRequest->toArray();
+	}
 }

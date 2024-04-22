@@ -9,16 +9,16 @@ use SellingPartnerApi\Vendor\DirectFulfillmentInventoryV1\Requests\SubmitInvento
 
 class Api extends BaseResource
 {
-    /**
-     * @param  string  $warehouseId  Identifier for the warehouse for which to update inventory.
-     * @param  SubmitInventoryUpdateRequest  $submitInventoryUpdateRequest  The request body for the submitInventoryUpdate operation.
-     */
-    public function submitInventoryUpdate(
-        string $warehouseId,
-        SubmitInventoryUpdateRequest $submitInventoryUpdateRequest,
-    ): Response {
-        $request = new SubmitInventoryUpdate($warehouseId, $submitInventoryUpdateRequest);
-
-        return $this->connector->send($request);
-    }
+	/**
+	 * @param string $warehouseId Identifier for the warehouse for which to update inventory.
+	 * @param SubmitInventoryUpdateRequest $submitInventoryUpdateRequest The request body for the submitInventoryUpdate operation.
+	 */
+	public function submitInventoryUpdate(
+		string $warehouseId,
+		SubmitInventoryUpdateRequest $submitInventoryUpdateRequest,
+	): Response
+	{
+		$request = new SubmitInventoryUpdate($warehouseId, $submitInventoryUpdateRequest);
+		return $this->connector->send($request);
+	}
 }

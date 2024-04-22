@@ -6,15 +6,16 @@ use Crescat\SaloonSdkGenerator\BaseDto;
 
 final class OrderList extends BaseDto
 {
-    protected static array $complexArrayTypes = ['orders' => [Order::class]];
+	protected static array $complexArrayTypes = ['orders' => [Order::class]];
 
-    /**
-     * @param  ?Pagination  $pagination
-     * @param  Order[]  $orders
-     */
-    public function __construct(
-        public readonly ?Pagination $pagination = null,
-        public readonly ?array $orders = null,
-    ) {
-    }
+
+	/**
+	 * @param ?Pagination $pagination
+	 * @param Order[]|null $orders
+	 */
+	public function __construct(
+		public readonly ?Pagination $pagination = null,
+		public readonly ?array $orders = null,
+	) {
+	}
 }

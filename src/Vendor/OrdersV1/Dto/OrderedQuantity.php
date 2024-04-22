@@ -6,15 +6,16 @@ use Crescat\SaloonSdkGenerator\BaseDto;
 
 final class OrderedQuantity extends BaseDto
 {
-    protected static array $complexArrayTypes = ['orderedQuantityDetails' => [OrderedQuantityDetails::class]];
+	protected static array $complexArrayTypes = ['orderedQuantityDetails' => [OrderedQuantityDetails::class]];
 
-    /**
-     * @param  ?ItemQuantity  $orderedQuantity  Details of quantity ordered.
-     * @param  OrderedQuantityDetails[]  $orderedQuantityDetails  Details of item quantity ordered.
-     */
-    public function __construct(
-        public readonly ?ItemQuantity $orderedQuantity = null,
-        public readonly ?array $orderedQuantityDetails = null,
-    ) {
-    }
+
+	/**
+	 * @param ?ItemQuantity $orderedQuantity Details of quantity ordered.
+	 * @param OrderedQuantityDetails[]|null $orderedQuantityDetails Details of item quantity ordered.
+	 */
+	public function __construct(
+		public readonly ?ItemQuantity $orderedQuantity = null,
+		public readonly ?array $orderedQuantityDetails = null,
+	) {
+	}
 }

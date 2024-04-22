@@ -6,13 +6,14 @@ use Crescat\SaloonSdkGenerator\BaseResponse;
 
 final class ReportScheduleList extends BaseResponse
 {
-    protected static array $complexArrayTypes = ['reportSchedules' => [ReportSchedule::class]];
+	protected static array $complexArrayTypes = ['reportSchedules' => [ReportSchedule::class]];
 
-    /**
-     * @param  ReportSchedule[]  $reportSchedules
-     */
-    public function __construct(
-        public readonly array $reportSchedules,
-    ) {
-    }
+
+	/**
+	 * @param ReportSchedule[] $reportSchedules
+	 */
+	public function __construct(
+		public readonly array $reportSchedules,
+	) {
+	}
 }

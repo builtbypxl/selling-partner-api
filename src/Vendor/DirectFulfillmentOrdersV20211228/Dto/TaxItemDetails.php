@@ -6,13 +6,14 @@ use Crescat\SaloonSdkGenerator\BaseDto;
 
 final class TaxItemDetails extends BaseDto
 {
-    protected static array $complexArrayTypes = ['taxLineItem' => [TaxDetails::class]];
+	protected static array $complexArrayTypes = ['taxLineItem' => [TaxDetails::class]];
 
-    /**
-     * @param  TaxDetails[]  $taxLineItem  A list of tax line items.
-     */
-    public function __construct(
-        public readonly ?array $taxLineItem = null,
-    ) {
-    }
+
+	/**
+	 * @param TaxDetails[]|null $taxLineItem A list of tax line items.
+	 */
+	public function __construct(
+		public readonly ?array $taxLineItem = null,
+	) {
+	}
 }

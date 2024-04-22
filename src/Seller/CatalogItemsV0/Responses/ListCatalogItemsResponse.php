@@ -8,15 +8,16 @@ use SellingPartnerApi\Seller\CatalogItemsV0\Dto\ListMatchingItemsResponse;
 
 final class ListCatalogItemsResponse extends BaseResponse
 {
-    protected static array $complexArrayTypes = ['errors' => [Error::class]];
+	protected static array $complexArrayTypes = ['errors' => [Error::class]];
 
-    /**
-     * @param  ?ListMatchingItemsResponse  $payload
-     * @param  Error[]|null  $errors  A list of error responses returned when a request is unsuccessful.
-     */
-    public function __construct(
-        public readonly ?ListMatchingItemsResponse $payload = null,
-        public readonly ?array $errors = null,
-    ) {
-    }
+
+	/**
+	 * @param ?ListMatchingItemsResponse $payload
+	 * @param Error[]|null $errors A list of error responses returned when a request is unsuccessful.
+	 */
+	public function __construct(
+		public readonly ?ListMatchingItemsResponse $payload = null,
+		public readonly ?array $errors = null,
+	) {
+	}
 }

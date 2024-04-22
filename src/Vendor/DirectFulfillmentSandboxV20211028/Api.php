@@ -10,23 +10,22 @@ use SellingPartnerApi\Vendor\DirectFulfillmentSandboxV20211028\Requests\GetOrder
 
 class Api extends BaseResource
 {
-    /**
-     * @param  GenerateOrderScenarioRequest  $generateOrderScenarioRequest  The request body for the generateOrderScenarios operation.
-     */
-    public function generateOrderScenarios(GenerateOrderScenarioRequest $generateOrderScenarioRequest): Response
-    {
-        $request = new GenerateOrderScenarios($generateOrderScenarioRequest);
+	/**
+	 * @param GenerateOrderScenarioRequest $generateOrderScenarioRequest The request body for the generateOrderScenarios operation.
+	 */
+	public function generateOrderScenarios(GenerateOrderScenarioRequest $generateOrderScenarioRequest): Response
+	{
+		$request = new GenerateOrderScenarios($generateOrderScenarioRequest);
+		return $this->connector->send($request);
+	}
 
-        return $this->connector->send($request);
-    }
 
-    /**
-     * @param  string  $transactionId  The transaction identifier returned in the response to the generateOrderScenarios operation.
-     */
-    public function getOrderScenarios(string $transactionId): Response
-    {
-        $request = new GetOrderScenarios($transactionId);
-
-        return $this->connector->send($request);
-    }
+	/**
+	 * @param string $transactionId The transaction identifier returned in the response to the generateOrderScenarios operation.
+	 */
+	public function getOrderScenarios(string $transactionId): Response
+	{
+		$request = new GetOrderScenarios($transactionId);
+		return $this->connector->send($request);
+	}
 }

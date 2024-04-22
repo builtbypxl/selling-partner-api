@@ -17,37 +17,40 @@ use SellingPartnerApi\Seller\ShippingV2\Responses\GetRatesResponse;
  */
 class GetRates extends Request implements HasBody
 {
-    use HasJsonBody;
+	use HasJsonBody;
 
-    protected Method $method = Method::POST;
+	protected Method $method = Method::POST;
 
-    /**
-     * @param  GetRatesRequest  $getRatesRequest  The request schema for the getRates operation. When the channelType is Amazon, the shipTo address is not required and will be ignored.
-     */
-    public function __construct(
-        public GetRatesRequest $getRatesRequest,
-    ) {
-    }
 
-    public function resolveEndpoint(): string
-    {
-        return '/shipping/v2/shipments/rates';
-    }
+	/**
+	 * @param GetRatesRequest $getRatesRequest The request schema for the getRates operation. When the channelType is Amazon, the shipTo address is not required and will be ignored.
+	 */
+	public function __construct(
+		public GetRatesRequest $getRatesRequest,
+	) {
+	}
 
-    public function createDtoFromResponse(Response $response): GetRatesResponse|ErrorList
-    {
-        $status = $response->status();
-        $responseCls = match ($status) {
-            200 => GetRatesResponse::class,
-            400, 401, 403, 404, 413, 415, 429, 500, 503 => ErrorList::class,
-            default => throw new Exception("Unhandled response status: {$status}")
-        };
 
-        return $responseCls::deserialize($response->json(), $responseCls);
-    }
+	public function resolveEndpoint(): string
+	{
+		return "/shipping/v2/shipments/rates";
+	}
 
-    public function defaultBody(): array
-    {
-        return $this->getRatesRequest->toArray();
-    }
+
+	public function createDtoFromResponse(Response $response): GetRatesResponse|ErrorList
+	{
+		$status = $response->status();
+		$responseCls = match ($status) {
+		    200 => GetRatesResponse::class,
+		    400, 401, 403, 404, 413, 415, 429, 500, 503 => ErrorList::class,
+		    default => throw new Exception("Unhandled response status: {$status}")
+		};
+		return $responseCls::deserialize($response->json(), $responseCls);
+	}
+
+
+	public function defaultBody(): array
+	{
+		return $this->getRatesRequest->toArray();
+	}
 }

@@ -18,37 +18,40 @@ use SellingPartnerApi\Seller\NotificationsV1\Responses\CreateDestinationResponse
  */
 class CreateDestination extends Request implements HasBody
 {
-    use HasJsonBody;
+	use HasJsonBody;
 
-    protected Method $method = Method::POST;
+	protected Method $method = Method::POST;
 
-    /**
-     * @param  CreateDestinationRequest  $createDestinationRequest  The request schema for the createDestination operation.
-     */
-    public function __construct(
-        public CreateDestinationRequest $createDestinationRequest,
-    ) {
-        $this->middleware()->onRequest(new Grantless(GrantlessScope::NOTIFICATIONS));
-    }
 
-    public function resolveEndpoint(): string
-    {
-        return '/notifications/v1/destinations';
-    }
+	/**
+	 * @param CreateDestinationRequest $createDestinationRequest The request schema for the `createDestination` operation.
+	 */
+	public function __construct(
+		public CreateDestinationRequest $createDestinationRequest,
+	) {
+		$this->middleware()->onRequest(new Grantless(GrantlessScope::NOTIFICATIONS));
+	}
 
-    public function createDtoFromResponse(Response $response): CreateDestinationResponse
-    {
-        $status = $response->status();
-        $responseCls = match ($status) {
-            200, 400, 403, 404, 409, 413, 415, 429, 500, 503 => CreateDestinationResponse::class,
-            default => throw new Exception("Unhandled response status: {$status}")
-        };
 
-        return $responseCls::deserialize($response->json(), $responseCls);
-    }
+	public function resolveEndpoint(): string
+	{
+		return "/notifications/v1/destinations";
+	}
 
-    public function defaultBody(): array
-    {
-        return $this->createDestinationRequest->toArray();
-    }
+
+	public function createDtoFromResponse(Response $response): CreateDestinationResponse
+	{
+		$status = $response->status();
+		$responseCls = match ($status) {
+		    200, 400, 403, 404, 409, 413, 415, 429, 500, 503 => CreateDestinationResponse::class,
+		    default => throw new Exception("Unhandled response status: {$status}")
+		};
+		return $responseCls::deserialize($response->json(), $responseCls);
+	}
+
+
+	public function defaultBody(): array
+	{
+		return $this->createDestinationRequest->toArray();
+	}
 }

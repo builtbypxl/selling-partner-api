@@ -7,13 +7,14 @@ use SellingPartnerApi\Seller\ProductPricingV20220501\Dto\FeaturedOfferExpectedPr
 
 final class GetFeaturedOfferExpectedPriceBatchResponse extends BaseResponse
 {
-    protected static array $complexArrayTypes = ['responses' => [FeaturedOfferExpectedPriceResponse::class]];
+	protected static array $complexArrayTypes = ['responses' => [FeaturedOfferExpectedPriceResponse::class]];
 
-    /**
-     * @param  FeaturedOfferExpectedPriceResponse[]|null  $responses  A batched list of featured offer expected price responses.
-     */
-    public function __construct(
-        public readonly ?array $responses = null,
-    ) {
-    }
+
+	/**
+	 * @param FeaturedOfferExpectedPriceResponse[]|null $responses A batched list of featured offer expected price responses.
+	 */
+	public function __construct(
+		public readonly ?array $responses = null,
+	) {
+	}
 }

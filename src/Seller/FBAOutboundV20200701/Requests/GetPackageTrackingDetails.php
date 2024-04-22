@@ -13,34 +13,37 @@ use SellingPartnerApi\Seller\FBAOutboundV20200701\Responses\GetPackageTrackingDe
  */
 class GetPackageTrackingDetails extends Request
 {
-    protected Method $method = Method::GET;
+	protected Method $method = Method::GET;
 
-    /**
-     * @param  int  $packageNumber  The unencrypted package identifier returned by the getFulfillmentOrder operation.
-     */
-    public function __construct(
-        protected int $packageNumber,
-    ) {
-    }
 
-    public function defaultQuery(): array
-    {
-        return array_filter(['packageNumber' => $this->packageNumber]);
-    }
+	/**
+	 * @param int $packageNumber The unencrypted package identifier returned by the `getFulfillmentOrder` operation.
+	 */
+	public function __construct(
+		protected int $packageNumber,
+	) {
+	}
 
-    public function resolveEndpoint(): string
-    {
-        return '/fba/outbound/2020-07-01/tracking';
-    }
 
-    public function createDtoFromResponse(Response $response): GetPackageTrackingDetailsResponse
-    {
-        $status = $response->status();
-        $responseCls = match ($status) {
-            200, 400, 401, 403, 404, 429, 500, 503 => GetPackageTrackingDetailsResponse::class,
-            default => throw new Exception("Unhandled response status: {$status}")
-        };
+	public function defaultQuery(): array
+	{
+		return array_filter(['packageNumber' => $this->packageNumber]);
+	}
 
-        return $responseCls::deserialize($response->json(), $responseCls);
-    }
+
+	public function resolveEndpoint(): string
+	{
+		return "/fba/outbound/2020-07-01/tracking";
+	}
+
+
+	public function createDtoFromResponse(Response $response): GetPackageTrackingDetailsResponse
+	{
+		$status = $response->status();
+		$responseCls = match ($status) {
+		    200, 400, 401, 403, 404, 429, 500, 503 => GetPackageTrackingDetailsResponse::class,
+		    default => throw new Exception("Unhandled response status: {$status}")
+		};
+		return $responseCls::deserialize($response->json(), $responseCls);
+	}
 }

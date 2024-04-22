@@ -17,37 +17,40 @@ use SellingPartnerApi\Seller\ProductPricingV0\Responses\GetItemOffersBatchRespon
  */
 class GetItemOffersBatch extends Request implements HasBody
 {
-    use HasJsonBody;
+	use HasJsonBody;
 
-    protected Method $method = Method::POST;
+	protected Method $method = Method::POST;
 
-    /**
-     * @param  GetItemOffersBatchRequest  $getItemOffersBatchRequest  The request associated with the `getItemOffersBatch` API call.
-     */
-    public function __construct(
-        public GetItemOffersBatchRequest $getItemOffersBatchRequest,
-    ) {
-    }
 
-    public function resolveEndpoint(): string
-    {
-        return '/batches/products/pricing/v0/itemOffers';
-    }
+	/**
+	 * @param GetItemOffersBatchRequest $getItemOffersBatchRequest The request associated with the `getItemOffersBatch` API call.
+	 */
+	public function __construct(
+		public GetItemOffersBatchRequest $getItemOffersBatchRequest,
+	) {
+	}
 
-    public function createDtoFromResponse(Response $response): GetItemOffersBatchResponse|Errors
-    {
-        $status = $response->status();
-        $responseCls = match ($status) {
-            200 => GetItemOffersBatchResponse::class,
-            400, 401, 403, 404, 429, 500, 503 => Errors::class,
-            default => throw new Exception("Unhandled response status: {$status}")
-        };
 
-        return $responseCls::deserialize($response->json(), $responseCls);
-    }
+	public function resolveEndpoint(): string
+	{
+		return "/batches/products/pricing/v0/itemOffers";
+	}
 
-    public function defaultBody(): array
-    {
-        return $this->getItemOffersBatchRequest->toArray();
-    }
+
+	public function createDtoFromResponse(Response $response): GetItemOffersBatchResponse|Errors
+	{
+		$status = $response->status();
+		$responseCls = match ($status) {
+		    200 => GetItemOffersBatchResponse::class,
+		    400, 401, 403, 404, 429, 500, 503 => Errors::class,
+		    default => throw new Exception("Unhandled response status: {$status}")
+		};
+		return $responseCls::deserialize($response->json(), $responseCls);
+	}
+
+
+	public function defaultBody(): array
+	{
+		return $this->getItemOffersBatchRequest->toArray();
+	}
 }

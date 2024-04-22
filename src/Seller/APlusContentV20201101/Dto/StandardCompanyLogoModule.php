@@ -6,11 +6,11 @@ use Crescat\SaloonSdkGenerator\BaseDto;
 
 final class StandardCompanyLogoModule extends BaseDto
 {
-    /**
-     * @param  ImageComponent  $companyLogo  A reference to an image, hosted in the A+ Content media library.
-     */
-    public function __construct(
-        public readonly ImageComponent $companyLogo,
-    ) {
-    }
+	/**
+	 * @param ImageComponent $companyLogo A reference to an image, hosted in the A+ Content media library.
+	 */
+	public function __construct(
+		public readonly ImageComponent $companyLogo,
+	) {
+	}
 }

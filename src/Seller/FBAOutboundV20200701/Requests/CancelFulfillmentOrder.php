@@ -13,29 +13,31 @@ use SellingPartnerApi\Seller\FBAOutboundV20200701\Responses\CancelFulfillmentOrd
  */
 class CancelFulfillmentOrder extends Request
 {
-    protected Method $method = Method::PUT;
+	protected Method $method = Method::PUT;
 
-    /**
-     * @param  string  $sellerFulfillmentOrderId  The identifier assigned to the item by the seller when the fulfillment order was created.
-     */
-    public function __construct(
-        protected string $sellerFulfillmentOrderId,
-    ) {
-    }
 
-    public function resolveEndpoint(): string
-    {
-        return "/fba/outbound/2020-07-01/fulfillmentOrders/{$this->sellerFulfillmentOrderId}/cancel";
-    }
+	/**
+	 * @param string $sellerFulfillmentOrderId The identifier assigned to the item by the seller when the fulfillment order was created.
+	 */
+	public function __construct(
+		protected string $sellerFulfillmentOrderId,
+	) {
+	}
 
-    public function createDtoFromResponse(Response $response): CancelFulfillmentOrderResponse
-    {
-        $status = $response->status();
-        $responseCls = match ($status) {
-            200, 400, 401, 403, 404, 429, 500, 503 => CancelFulfillmentOrderResponse::class,
-            default => throw new Exception("Unhandled response status: {$status}")
-        };
 
-        return $responseCls::deserialize($response->json(), $responseCls);
-    }
+	public function resolveEndpoint(): string
+	{
+		return "/fba/outbound/2020-07-01/fulfillmentOrders/{$this->sellerFulfillmentOrderId}/cancel";
+	}
+
+
+	public function createDtoFromResponse(Response $response): CancelFulfillmentOrderResponse
+	{
+		$status = $response->status();
+		$responseCls = match ($status) {
+		    200, 400, 401, 403, 404, 429, 500, 503 => CancelFulfillmentOrderResponse::class,
+		    default => throw new Exception("Unhandled response status: {$status}")
+		};
+		return $responseCls::deserialize($response->json(), $responseCls);
+	}
 }

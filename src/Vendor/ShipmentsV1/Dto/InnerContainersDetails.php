@@ -6,15 +6,16 @@ use Crescat\SaloonSdkGenerator\BaseDto;
 
 final class InnerContainersDetails extends BaseDto
 {
-    protected static array $complexArrayTypes = ['containerSequenceNumbers' => [ContainerSequenceNumbers::class]];
+	protected static array $complexArrayTypes = ['containerSequenceNumbers' => [ContainerSequenceNumbers::class]];
 
-    /**
-     * @param  ?int  $containerCount  Total containers as part of the shipment
-     * @param  ContainerSequenceNumbers[]  $containerSequenceNumbers  Container sequence numbers that are involved in this shipment.
-     */
-    public function __construct(
-        public readonly ?int $containerCount = null,
-        public readonly ?array $containerSequenceNumbers = null,
-    ) {
-    }
+
+	/**
+	 * @param ?int $containerCount Total containers as part of the shipment
+	 * @param ContainerSequenceNumbers[]|null $containerSequenceNumbers Container sequence numbers that are involved in this shipment.
+	 */
+	public function __construct(
+		public readonly ?int $containerCount = null,
+		public readonly ?array $containerSequenceNumbers = null,
+	) {
+	}
 }

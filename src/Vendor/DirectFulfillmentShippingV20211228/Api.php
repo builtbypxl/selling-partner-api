@@ -21,132 +21,146 @@ use SellingPartnerApi\Vendor\DirectFulfillmentShippingV20211228\Requests\SubmitS
 
 class Api extends BaseResource
 {
-    /**
-     * @param  DateTime  $createdAfter  Shipping labels that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format.
-     * @param  DateTime  $createdBefore  Shipping labels that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format.
-     * @param  ?string  $shipFromPartyId  The vendor warehouseId for order fulfillment. If not specified, the result will contain orders for all warehouses.
-     * @param  ?int  $limit  The limit to the number of records returned.
-     * @param  ?string  $sortOrder  Sort ASC or DESC by order creation date.
-     * @param  ?string  $nextToken  Used for pagination when there are more ship labels than the specified result size limit. The token value is returned in the previous API call.
-     */
-    public function getShippingLabels(
-        \DateTime $createdAfter,
-        \DateTime $createdBefore,
-        ?string $shipFromPartyId = null,
-        ?int $limit = null,
-        ?string $sortOrder = null,
-        ?string $nextToken = null,
-    ): Response {
-        $request = new GetShippingLabels($createdAfter, $createdBefore, $shipFromPartyId, $limit, $sortOrder, $nextToken);
+	/**
+	 * @param DateTime $createdAfter Shipping labels that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format.
+	 * @param DateTime $createdBefore Shipping labels that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format.
+	 * @param ?string $shipFromPartyId The vendor warehouseId for order fulfillment. If not specified, the result will contain orders for all warehouses.
+	 * @param ?int $limit The limit to the number of records returned.
+	 * @param ?string $sortOrder Sort ASC or DESC by order creation date.
+	 * @param ?string $nextToken Used for pagination when there are more ship labels than the specified result size limit. The token value is returned in the previous API call.
+	 */
+	public function getShippingLabels(
+		\DateTime $createdAfter,
+		\DateTime $createdBefore,
+		?string $shipFromPartyId = null,
+		?int $limit = null,
+		?string $sortOrder = null,
+		?string $nextToken = null,
+	): Response
+	{
+		$request = new GetShippingLabels($createdAfter, $createdBefore, $shipFromPartyId, $limit, $sortOrder, $nextToken);
+		return $this->connector->send($request);
+	}
 
-        return $this->connector->send($request);
-    }
 
-    public function submitShippingLabelRequest(SubmitShippingLabelsRequest $submitShippingLabelsRequest): Response
-    {
-        $request = new SubmitShippingLabelRequest($submitShippingLabelsRequest);
+	/**
+	 * @param SubmitShippingLabelsRequest $submitShippingLabelsRequest
+	 */
+	public function submitShippingLabelRequest(SubmitShippingLabelsRequest $submitShippingLabelsRequest): Response
+	{
+		$request = new SubmitShippingLabelRequest($submitShippingLabelsRequest);
+		return $this->connector->send($request);
+	}
 
-        return $this->connector->send($request);
-    }
 
-    /**
-     * @param  string  $purchaseOrderNumber  The purchase order number for which you want to return the shipping label. It should be the same purchaseOrderNumber as received in the order.
-     */
-    public function getShippingLabel(string $purchaseOrderNumber): Response
-    {
-        $request = new GetShippingLabel($purchaseOrderNumber);
+	/**
+	 * @param string $purchaseOrderNumber The purchase order number for which you want to return the shipping label. It should be the same purchaseOrderNumber as received in the order.
+	 */
+	public function getShippingLabel(string $purchaseOrderNumber): Response
+	{
+		$request = new GetShippingLabel($purchaseOrderNumber);
+		return $this->connector->send($request);
+	}
 
-        return $this->connector->send($request);
-    }
 
-    /**
-     * @param  string  $purchaseOrderNumber  The purchase order number for which you want to return the shipping labels. It should be the same purchaseOrderNumber as received in the order.
-     * @param  CreateShippingLabelsRequest  $createShippingLabelsRequest  The request body for the createShippingLabels operation.
-     */
-    public function createShippingLabels(
-        string $purchaseOrderNumber,
-        CreateShippingLabelsRequest $createShippingLabelsRequest,
-    ): Response {
-        $request = new CreateShippingLabels($purchaseOrderNumber, $createShippingLabelsRequest);
+	/**
+	 * @param string $purchaseOrderNumber The purchase order number for which you want to return the shipping labels. It should be the same purchaseOrderNumber as received in the order.
+	 * @param CreateShippingLabelsRequest $createShippingLabelsRequest The request body for the createShippingLabels operation.
+	 */
+	public function createShippingLabels(
+		string $purchaseOrderNumber,
+		CreateShippingLabelsRequest $createShippingLabelsRequest,
+	): Response
+	{
+		$request = new CreateShippingLabels($purchaseOrderNumber, $createShippingLabelsRequest);
+		return $this->connector->send($request);
+	}
 
-        return $this->connector->send($request);
-    }
 
-    public function submitShipmentConfirmations(
-        SubmitShipmentConfirmationsRequest $submitShipmentConfirmationsRequest,
-    ): Response {
-        $request = new SubmitShipmentConfirmations($submitShipmentConfirmationsRequest);
+	/**
+	 * @param SubmitShipmentConfirmationsRequest $submitShipmentConfirmationsRequest
+	 */
+	public function submitShipmentConfirmations(
+		SubmitShipmentConfirmationsRequest $submitShipmentConfirmationsRequest,
+	): Response
+	{
+		$request = new SubmitShipmentConfirmations($submitShipmentConfirmationsRequest);
+		return $this->connector->send($request);
+	}
 
-        return $this->connector->send($request);
-    }
 
-    public function submitShipmentStatusUpdates(
-        SubmitShipmentStatusUpdatesRequest $submitShipmentStatusUpdatesRequest,
-    ): Response {
-        $request = new SubmitShipmentStatusUpdates($submitShipmentStatusUpdatesRequest);
+	/**
+	 * @param SubmitShipmentStatusUpdatesRequest $submitShipmentStatusUpdatesRequest
+	 */
+	public function submitShipmentStatusUpdates(
+		SubmitShipmentStatusUpdatesRequest $submitShipmentStatusUpdatesRequest,
+	): Response
+	{
+		$request = new SubmitShipmentStatusUpdates($submitShipmentStatusUpdatesRequest);
+		return $this->connector->send($request);
+	}
 
-        return $this->connector->send($request);
-    }
 
-    /**
-     * @param  DateTime  $createdAfter  Orders that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format.
-     * @param  DateTime  $createdBefore  Orders that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format.
-     * @param  ?string  $shipFromPartyId  The vendor warehouseId for order fulfillment. If not specified, the result will contain orders for all warehouses.
-     * @param  ?int  $limit  The limit to the number of records returned
-     * @param  ?string  $sortOrder  Sort ASC or DESC by order creation date.
-     * @param  ?string  $nextToken  Used for pagination when there are more orders than the specified result size limit. The token value is returned in the previous API call.
-     */
-    public function getCustomerInvoices(
-        \DateTime $createdAfter,
-        \DateTime $createdBefore,
-        ?string $shipFromPartyId = null,
-        ?int $limit = null,
-        ?string $sortOrder = null,
-        ?string $nextToken = null,
-    ): Response {
-        $request = new GetCustomerInvoices($createdAfter, $createdBefore, $shipFromPartyId, $limit, $sortOrder, $nextToken);
+	/**
+	 * @param DateTime $createdAfter Orders that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format.
+	 * @param DateTime $createdBefore Orders that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format.
+	 * @param ?string $shipFromPartyId The vendor warehouseId for order fulfillment. If not specified, the result will contain orders for all warehouses.
+	 * @param ?int $limit The limit to the number of records returned
+	 * @param ?string $sortOrder Sort ASC or DESC by order creation date.
+	 * @param ?string $nextToken Used for pagination when there are more orders than the specified result size limit. The token value is returned in the previous API call.
+	 */
+	public function getCustomerInvoices(
+		\DateTime $createdAfter,
+		\DateTime $createdBefore,
+		?string $shipFromPartyId = null,
+		?int $limit = null,
+		?string $sortOrder = null,
+		?string $nextToken = null,
+	): Response
+	{
+		$request = new GetCustomerInvoices($createdAfter, $createdBefore, $shipFromPartyId, $limit, $sortOrder, $nextToken);
+		return $this->connector->send($request);
+	}
 
-        return $this->connector->send($request);
-    }
 
-    /**
-     * @param  string  $purchaseOrderNumber  Purchase order number of the shipment for which to return the invoice.
-     */
-    public function getCustomerInvoice(string $purchaseOrderNumber): Response
-    {
-        $request = new GetCustomerInvoice($purchaseOrderNumber);
+	/**
+	 * @param string $purchaseOrderNumber Purchase order number of the shipment for which to return the invoice.
+	 */
+	public function getCustomerInvoice(string $purchaseOrderNumber): Response
+	{
+		$request = new GetCustomerInvoice($purchaseOrderNumber);
+		return $this->connector->send($request);
+	}
 
-        return $this->connector->send($request);
-    }
 
-    /**
-     * @param  DateTime  $createdAfter  Packing slips that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format.
-     * @param  DateTime  $createdBefore  Packing slips that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format.
-     * @param  ?string  $shipFromPartyId  The vendor warehouseId for order fulfillment. If not specified the result will contain orders for all warehouses.
-     * @param  ?int  $limit  The limit to the number of records returned
-     * @param  ?string  $sortOrder  Sort ASC or DESC by packing slip creation date.
-     * @param  ?string  $nextToken  Used for pagination when there are more packing slips than the specified result size limit. The token value is returned in the previous API call.
-     */
-    public function getPackingSlips(
-        \DateTime $createdAfter,
-        \DateTime $createdBefore,
-        ?string $shipFromPartyId = null,
-        ?int $limit = null,
-        ?string $sortOrder = null,
-        ?string $nextToken = null,
-    ): Response {
-        $request = new GetPackingSlips($createdAfter, $createdBefore, $shipFromPartyId, $limit, $sortOrder, $nextToken);
+	/**
+	 * @param DateTime $createdAfter Packing slips that became available after this date and time will be included in the result. Must be in ISO-8601 date/time format.
+	 * @param DateTime $createdBefore Packing slips that became available before this date and time will be included in the result. Must be in ISO-8601 date/time format.
+	 * @param ?string $shipFromPartyId The vendor warehouseId for order fulfillment. If not specified the result will contain orders for all warehouses.
+	 * @param ?int $limit The limit to the number of records returned
+	 * @param ?string $sortOrder Sort ASC or DESC by packing slip creation date.
+	 * @param ?string $nextToken Used for pagination when there are more packing slips than the specified result size limit. The token value is returned in the previous API call.
+	 */
+	public function getPackingSlips(
+		\DateTime $createdAfter,
+		\DateTime $createdBefore,
+		?string $shipFromPartyId = null,
+		?int $limit = null,
+		?string $sortOrder = null,
+		?string $nextToken = null,
+	): Response
+	{
+		$request = new GetPackingSlips($createdAfter, $createdBefore, $shipFromPartyId, $limit, $sortOrder, $nextToken);
+		return $this->connector->send($request);
+	}
 
-        return $this->connector->send($request);
-    }
 
-    /**
-     * @param  string  $purchaseOrderNumber  The purchaseOrderNumber for the packing slip you want.
-     */
-    public function getPackingSlip(string $purchaseOrderNumber): Response
-    {
-        $request = new GetPackingSlip($purchaseOrderNumber);
-
-        return $this->connector->send($request);
-    }
+	/**
+	 * @param string $purchaseOrderNumber The purchaseOrderNumber for the packing slip you want.
+	 */
+	public function getPackingSlip(string $purchaseOrderNumber): Response
+	{
+		$request = new GetPackingSlip($purchaseOrderNumber);
+		return $this->connector->send($request);
+	}
 }

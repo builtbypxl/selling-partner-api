@@ -8,15 +8,16 @@ use SellingPartnerApi\Vendor\DirectFulfillmentShippingV1\Dto\ShippingLabel;
 
 final class GetShippingLabelResponse extends BaseResponse
 {
-    protected static array $complexArrayTypes = ['errors' => [Error::class]];
+	protected static array $complexArrayTypes = ['errors' => [Error::class]];
 
-    /**
-     * @param  ?ShippingLabel  $payload
-     * @param  Error[]  $errors  A list of error responses returned when a request is unsuccessful.
-     */
-    public function __construct(
-        public readonly ?ShippingLabel $payload = null,
-        public readonly ?array $errors = null,
-    ) {
-    }
+
+	/**
+	 * @param ?ShippingLabel $payload
+	 * @param Error[]|null $errors A list of error responses returned when a request is unsuccessful.
+	 */
+	public function __construct(
+		public readonly ?ShippingLabel $payload = null,
+		public readonly ?array $errors = null,
+	) {
+	}
 }

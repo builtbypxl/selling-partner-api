@@ -6,13 +6,14 @@ use Crescat\SaloonSdkGenerator\BaseDto;
 
 final class Embedded extends BaseDto
 {
-    protected static array $complexArrayTypes = ['actions' => [LinkObject::class]];
+	protected static array $complexArrayTypes = ['actions' => [LinkObject::class]];
 
-    /**
-     * @param  LinkObject[]  $actions  Eligible actions for the specified amazonOrderId.
-     */
-    public function __construct(
-        public readonly array $actions,
-    ) {
-    }
+
+	/**
+	 * @param LinkObject[] $actions Eligible actions for the specified amazonOrderId.
+	 */
+	public function __construct(
+		public readonly array $actions,
+	) {
+	}
 }

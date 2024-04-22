@@ -16,24 +16,25 @@ use SellingPartnerApi\Seller\ApplicationManagementV20231130\Responses\ErrorList;
  */
 class RotateApplicationClientSecret extends Request implements HasBody
 {
-    use HasJsonBody;
+	use HasJsonBody;
 
-    protected Method $method = Method::POST;
+	protected Method $method = Method::POST;
 
-    public function resolveEndpoint(): string
-    {
-        return '/applications/2023-11-30/clientSecret';
-    }
 
-    public function createDtoFromResponse(Response $response): EmptyResponse|ErrorList
-    {
-        $status = $response->status();
-        $responseCls = match ($status) {
-            204 => EmptyResponse::class,
-            400, 403, 404, 413, 415, 429, 500, 503 => ErrorList::class,
-            default => throw new Exception("Unhandled response status: {$status}")
-        };
+	public function resolveEndpoint(): string
+	{
+		return "/applications/2023-11-30/clientSecret";
+	}
 
-        return $responseCls::deserialize($response->json(), $responseCls);
-    }
+
+	public function createDtoFromResponse(Response $response): EmptyResponse|ErrorList
+	{
+		$status = $response->status();
+		$responseCls = match ($status) {
+		    204 => EmptyResponse::class,
+		    400, 403, 404, 413, 415, 429, 500, 503 => ErrorList::class,
+		    default => throw new Exception("Unhandled response status: {$status}")
+		};
+		return $responseCls::deserialize($response->json(), $responseCls);
+	}
 }

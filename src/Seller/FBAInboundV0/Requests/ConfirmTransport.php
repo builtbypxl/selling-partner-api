@@ -15,31 +15,33 @@ use SellingPartnerApi\Seller\FBAInboundV0\Responses\ConfirmTransportResponse;
  */
 class ConfirmTransport extends Request implements HasBody
 {
-    use HasJsonBody;
+	use HasJsonBody;
 
-    protected Method $method = Method::POST;
+	protected Method $method = Method::POST;
 
-    /**
-     * @param  string  $shipmentId  A shipment identifier originally returned by the createInboundShipmentPlan operation.
-     */
-    public function __construct(
-        protected string $shipmentId,
-    ) {
-    }
 
-    public function resolveEndpoint(): string
-    {
-        return "/fba/inbound/v0/shipments/{$this->shipmentId}/transport/confirm";
-    }
+	/**
+	 * @param string $shipmentId A shipment identifier originally returned by the createInboundShipmentPlan operation.
+	 */
+	public function __construct(
+		protected string $shipmentId,
+	) {
+	}
 
-    public function createDtoFromResponse(Response $response): ConfirmTransportResponse
-    {
-        $status = $response->status();
-        $responseCls = match ($status) {
-            200, 400, 401, 403, 404, 429, 500, 503 => ConfirmTransportResponse::class,
-            default => throw new Exception("Unhandled response status: {$status}")
-        };
 
-        return $responseCls::deserialize($response->json(), $responseCls);
-    }
+	public function resolveEndpoint(): string
+	{
+		return "/fba/inbound/v0/shipments/{$this->shipmentId}/transport/confirm";
+	}
+
+
+	public function createDtoFromResponse(Response $response): ConfirmTransportResponse
+	{
+		$status = $response->status();
+		$responseCls = match ($status) {
+		    200, 400, 401, 403, 404, 429, 500, 503 => ConfirmTransportResponse::class,
+		    default => throw new Exception("Unhandled response status: {$status}")
+		};
+		return $responseCls::deserialize($response->json(), $responseCls);
+	}
 }

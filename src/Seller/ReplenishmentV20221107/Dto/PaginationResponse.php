@@ -6,11 +6,11 @@ use Crescat\SaloonSdkGenerator\BaseDto;
 
 final class PaginationResponse extends BaseDto
 {
-    /**
-     * @param  ?int  $totalResults  Total number of results matching the given filter criteria.
-     */
-    public function __construct(
-        public readonly ?int $totalResults = null,
-    ) {
-    }
+	/**
+	 * @param ?int $totalResults Total number of results matching the given filter criteria.
+	 */
+	public function __construct(
+		public readonly ?int $totalResults = null,
+	) {
+	}
 }

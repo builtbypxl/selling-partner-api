@@ -17,45 +17,50 @@ use SellingPartnerApi\Seller\APlusContentV20201101\Responses\PostContentDocument
  */
 class UpdateContentDocument extends Request implements HasBody
 {
-    use HasJsonBody;
+	use HasJsonBody;
 
-    protected Method $method = Method::POST;
+	protected Method $method = Method::POST;
 
-    /**
-     * @param  string  $contentReferenceKey  The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ Content identifier.
-     * @param  string  $marketplaceId  The identifier for the marketplace where the A+ Content is published.
-     */
-    public function __construct(
-        protected string $contentReferenceKey,
-        public PostContentDocumentRequest $postContentDocumentRequest,
-        protected string $marketplaceId,
-    ) {
-    }
 
-    public function defaultQuery(): array
-    {
-        return array_filter(['marketplaceId' => $this->marketplaceId]);
-    }
+	/**
+	 * @param string $contentReferenceKey The unique reference key for the A+ Content document. A content reference key cannot form a permalink and may change in the future. A content reference key is not guaranteed to match any A+ Content identifier.
+	 * @param PostContentDocumentRequest $postContentDocumentRequest
+	 * @param string $marketplaceId The identifier for the marketplace where the A+ Content is published.
+	 */
+	public function __construct(
+		protected string $contentReferenceKey,
+		public PostContentDocumentRequest $postContentDocumentRequest,
+		protected string $marketplaceId,
+	) {
+	}
 
-    public function resolveEndpoint(): string
-    {
-        return "/aplus/2020-11-01/contentDocuments/{$this->contentReferenceKey}";
-    }
 
-    public function createDtoFromResponse(Response $response): PostContentDocumentResponse|ErrorList
-    {
-        $status = $response->status();
-        $responseCls = match ($status) {
-            200 => PostContentDocumentResponse::class,
-            400, 401, 403, 404, 410, 429, 500, 503 => ErrorList::class,
-            default => throw new Exception("Unhandled response status: {$status}")
-        };
+	public function defaultQuery(): array
+	{
+		return array_filter(['marketplaceId' => $this->marketplaceId]);
+	}
 
-        return $responseCls::deserialize($response->json(), $responseCls);
-    }
 
-    public function defaultBody(): array
-    {
-        return $this->postContentDocumentRequest->toArray();
-    }
+	public function resolveEndpoint(): string
+	{
+		return "/aplus/2020-11-01/contentDocuments/{$this->contentReferenceKey}";
+	}
+
+
+	public function createDtoFromResponse(Response $response): PostContentDocumentResponse|ErrorList
+	{
+		$status = $response->status();
+		$responseCls = match ($status) {
+		    200 => PostContentDocumentResponse::class,
+		    400, 401, 403, 404, 410, 429, 500, 503 => ErrorList::class,
+		    default => throw new Exception("Unhandled response status: {$status}")
+		};
+		return $responseCls::deserialize($response->json(), $responseCls);
+	}
+
+
+	public function defaultBody(): array
+	{
+		return $this->postContentDocumentRequest->toArray();
+	}
 }

@@ -13,29 +13,31 @@ use SellingPartnerApi\Seller\ServicesV1\Responses\GetServiceJobByServiceJobIdRes
  */
 class GetServiceJobByServiceJobId extends Request
 {
-    protected Method $method = Method::GET;
+	protected Method $method = Method::GET;
 
-    /**
-     * @param  string  $serviceJobId  A service job identifier.
-     */
-    public function __construct(
-        protected string $serviceJobId,
-    ) {
-    }
 
-    public function resolveEndpoint(): string
-    {
-        return "/service/v1/serviceJobs/{$this->serviceJobId}";
-    }
+	/**
+	 * @param string $serviceJobId A service job identifier.
+	 */
+	public function __construct(
+		protected string $serviceJobId,
+	) {
+	}
 
-    public function createDtoFromResponse(Response $response): GetServiceJobByServiceJobIdResponse
-    {
-        $status = $response->status();
-        $responseCls = match ($status) {
-            200, 400, 403, 404, 413, 415, 422, 429, 500, 503 => GetServiceJobByServiceJobIdResponse::class,
-            default => throw new Exception("Unhandled response status: {$status}")
-        };
 
-        return $responseCls::deserialize($response->json(), $responseCls);
-    }
+	public function resolveEndpoint(): string
+	{
+		return "/service/v1/serviceJobs/{$this->serviceJobId}";
+	}
+
+
+	public function createDtoFromResponse(Response $response): GetServiceJobByServiceJobIdResponse
+	{
+		$status = $response->status();
+		$responseCls = match ($status) {
+		    200, 400, 403, 404, 413, 415, 422, 429, 500, 503 => GetServiceJobByServiceJobIdResponse::class,
+		    default => throw new Exception("Unhandled response status: {$status}")
+		};
+		return $responseCls::deserialize($response->json(), $responseCls);
+	}
 }

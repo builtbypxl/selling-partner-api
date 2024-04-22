@@ -6,13 +6,13 @@ use Crescat\SaloonSdkGenerator\BaseDto;
 
 final class Link extends BaseDto
 {
-    /**
-     * @param  string  $resource  URI resource for the link.
-     * @param  string  $verb  HTTP method for the link operation.
-     */
-    public function __construct(
-        public readonly string $resource,
-        public readonly string $verb,
-    ) {
-    }
+	/**
+	 * @param string $resource URI resource for the link.
+	 * @param string $verb HTTP method for the link operation.
+	 */
+	public function __construct(
+		public readonly string $resource,
+		public readonly string $verb,
+	) {
+	}
 }

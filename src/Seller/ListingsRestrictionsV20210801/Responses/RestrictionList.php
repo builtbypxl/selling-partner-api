@@ -7,13 +7,14 @@ use SellingPartnerApi\Seller\ListingsRestrictionsV20210801\Dto\Restriction;
 
 final class RestrictionList extends BaseResponse
 {
-    protected static array $complexArrayTypes = ['restrictions' => [Restriction::class]];
+	protected static array $complexArrayTypes = ['restrictions' => [Restriction::class]];
 
-    /**
-     * @param  Restriction[]  $restrictions
-     */
-    public function __construct(
-        public readonly array $restrictions,
-    ) {
-    }
+
+	/**
+	 * @param Restriction[] $restrictions
+	 */
+	public function __construct(
+		public readonly array $restrictions,
+	) {
+	}
 }

@@ -15,26 +15,28 @@ use SellingPartnerApi\Seller\NotificationsV1\Responses\GetDestinationsResponse;
  */
 class GetDestinations extends Request
 {
-    protected Method $method = Method::GET;
+	protected Method $method = Method::GET;
 
-    public function __construct()
-    {
-        $this->middleware()->onRequest(new Grantless(GrantlessScope::NOTIFICATIONS));
-    }
 
-    public function resolveEndpoint(): string
-    {
-        return '/notifications/v1/destinations';
-    }
+	public function __construct()
+	{
+		$this->middleware()->onRequest(new Grantless(GrantlessScope::NOTIFICATIONS));
+	}
 
-    public function createDtoFromResponse(Response $response): GetDestinationsResponse
-    {
-        $status = $response->status();
-        $responseCls = match ($status) {
-            200, 400, 403, 404, 409, 413, 415, 429, 500, 503 => GetDestinationsResponse::class,
-            default => throw new Exception("Unhandled response status: {$status}")
-        };
 
-        return $responseCls::deserialize($response->json(), $responseCls);
-    }
+	public function resolveEndpoint(): string
+	{
+		return "/notifications/v1/destinations";
+	}
+
+
+	public function createDtoFromResponse(Response $response): GetDestinationsResponse
+	{
+		$status = $response->status();
+		$responseCls = match ($status) {
+		    200, 400, 403, 404, 409, 413, 415, 429, 500, 503 => GetDestinationsResponse::class,
+		    default => throw new Exception("Unhandled response status: {$status}")
+		};
+		return $responseCls::deserialize($response->json(), $responseCls);
+	}
 }

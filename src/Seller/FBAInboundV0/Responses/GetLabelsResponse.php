@@ -8,15 +8,16 @@ use SellingPartnerApi\Seller\FBAInboundV0\Dto\LabelDownloadUrl;
 
 final class GetLabelsResponse extends BaseResponse
 {
-    protected static array $complexArrayTypes = ['errors' => [Error::class]];
+	protected static array $complexArrayTypes = ['errors' => [Error::class]];
 
-    /**
-     * @param  ?LabelDownloadUrl  $payload
-     * @param  Error[]|null  $errors  A list of error responses returned when a request is unsuccessful.
-     */
-    public function __construct(
-        public readonly ?LabelDownloadUrl $payload = null,
-        public readonly ?array $errors = null,
-    ) {
-    }
+
+	/**
+	 * @param ?LabelDownloadUrl $payload Download URL for a label
+	 * @param Error[]|null $errors A list of error responses returned when a request is unsuccessful.
+	 */
+	public function __construct(
+		public readonly ?LabelDownloadUrl $payload = null,
+		public readonly ?array $errors = null,
+	) {
+	}
 }
