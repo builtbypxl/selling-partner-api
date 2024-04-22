@@ -208,6 +208,11 @@ class SellerConnector extends SellingPartnerApi
         return new FBAInboundV0\Api($this);
     }
 
+    public function fbaInboundV20240320(): FBAInboundV20240320\Api
+    {
+        return new FBAInboundV20240320\Api($this);
+    }
+
     public function fbaInboundEligibilityV1(): FBAInboundEligibilityV1\Api
     {
         return new FBAInboundEligibilityV1\Api($this);
