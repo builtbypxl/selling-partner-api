@@ -24,7 +24,7 @@
                 "tags": [
                     "FBAOutboundV20200701"
                 ],
-                "description": "Returns a list of fulfillment order previews based on shipping criteria that you specify.\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api).",
+                "description": "Returns a list of fulfillment order previews based on shipping criteria that you specify.\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, refer to [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api).",
                 "operationId": "getFulfillmentPreview",
                 "requestBody": {
                     "content": {
@@ -235,7 +235,7 @@
                 "tags": [
                     "FBAOutboundV20200701"
                 ],
-                "description": "Returns a list of fulfillment orders fulfilled after (or at) a specified date-time, or indicated by the next token parameter.\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api)",
+                "description": "Returns a list of fulfillment orders fulfilled after (or at) a specified date-time, or indicated by the next token parameter.\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, refer to [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api)",
                 "operationId": "listAllFulfillmentOrders",
                 "parameters": [
                     {
@@ -449,7 +449,7 @@
                 "tags": [
                     "FBAOutboundV20200701"
                 ],
-                "description": "Requests that Amazon ship items from the seller's inventory in Amazon's fulfillment network to a destination address.\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api)",
+                "description": "Requests that Amazon ship items from the seller's inventory in Amazon's fulfillment network to a destination address.\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, refer to [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api)",
                 "operationId": "createFulfillmentOrder",
                 "requestBody": {
                     "content": {
@@ -660,13 +660,13 @@
                 "tags": [
                     "FBAOutboundV20200701"
                 ],
-                "description": "Returns delivery tracking information for a package in an outbound shipment for a Multi-Channel Fulfillment order.\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api).",
+                "description": "Returns delivery tracking information for a package in an outbound shipment for a Multi-Channel Fulfillment order.\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, refer to [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api).",
                 "operationId": "getPackageTrackingDetails",
                 "parameters": [
                     {
                         "name": "packageNumber",
                         "in": "query",
-                        "description": "The unencrypted package identifier returned by the getFulfillmentOrder operation.",
+                        "description": "The unencrypted package identifier returned by the `getFulfillmentOrder` operation.",
                         "required": true,
                         "schema": {
                             "type": "integer",
@@ -872,7 +872,7 @@
                 "tags": [
                     "FBAOutboundV20200701"
                 ],
-                "description": "Returns a list of return reason codes for a seller SKU in a given marketplace. The parameters for this operation may contain special characters that require URL encoding. To avoid errors with SKUs when encoding URLs, refer to [URL Encoding](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/url-encoding).\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api).",
+                "description": "Returns a list of return reason codes for a seller SKU in a given marketplace. The parameters for this operation may contain special characters that require URL encoding. To avoid errors with SKUs when encoding URLs, refer to [URL Encoding](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/url-encoding).\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, refer to [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api).",
                 "operationId": "listReturnReasonCodes",
                 "parameters": [
                     {
@@ -903,8 +903,7 @@
                     {
                         "name": "language",
                         "in": "query",
-                        "description": "The language that the TranslatedDescription property of the ReasonCodeDetails response object should be translated into.",
-                        "required": true,
+                        "description": "The language that the `TranslatedDescription` property of the `ReasonCodeDetails` response object should be translated into.",
                         "schema": {
                             "type": "string"
                         }
@@ -1108,13 +1107,13 @@
                 "tags": [
                     "FBAOutboundV20200701"
                 ],
-                "description": "Creates a fulfillment return.\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api).",
+                "description": "Creates a fulfillment return.\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, refer to [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api).",
                 "operationId": "createFulfillmentReturn",
                 "parameters": [
                     {
                         "name": "sellerFulfillmentOrderId",
                         "in": "path",
-                        "description": "An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct SellerFulfillmentOrderId value based on the buyer's request to return items.",
+                        "description": "An identifier assigned by the seller to the fulfillment order at the time it was created. The seller uses their own records to find the correct `SellerFulfillmentOrderId` value based on the buyer's request to return items.",
                         "required": true,
                         "schema": {
                             "type": "string"
@@ -1336,7 +1335,7 @@
                 "tags": [
                     "FBAOutboundV20200701"
                 ],
-                "description": "Returns the fulfillment order indicated by the specified order identifier.\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api).",
+                "description": "Returns the fulfillment order indicated by the specified order identifier.\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, refer to [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api).",
                 "operationId": "getFulfillmentOrder",
                 "parameters": [
                     {
@@ -1543,7 +1542,7 @@
                 "tags": [
                     "FBAOutboundV20200701"
                 ],
-                "description": "Updates and\/or requests shipment for a fulfillment order with an order hold on it.\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api).",
+                "description": "Updates and\/or requests shipment for a fulfillment order with an order hold on it.\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, refer to [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api).",
                 "operationId": "updateFulfillmentOrder",
                 "parameters": [
                     {
@@ -1766,7 +1765,7 @@
                 "tags": [
                     "FBAOutboundV20200701"
                 ],
-                "description": "Requests that Amazon stop attempting to fulfill the fulfillment order indicated by the specified order identifier.\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api).",
+                "description": "Requests that Amazon stop attempting to fulfill the fulfillment order indicated by the specified order identifier.\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, refer to [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api).",
                 "operationId": "cancelFulfillmentOrder",
                 "parameters": [
                     {
@@ -2202,7 +2201,7 @@
                 "tags": [
                     "FBAOutboundV20200701"
                 ],
-                "description": "Returns a list of features available for Multi-Channel Fulfillment orders in the marketplace you specify, and whether the seller for which you made the call is enrolled for each feature.\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api).",
+                "description": "Returns a list of features available for Multi-Channel Fulfillment orders in the marketplace you specify, and whether the seller for which you made the call is enrolled for each feature.\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, refer to [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api).",
                 "operationId": "getFeatures",
                 "parameters": [
                     {
@@ -2413,7 +2412,7 @@
                 "tags": [
                     "FBAOutboundV20200701"
                 ],
-                "description": "Returns a list of inventory items that are eligible for the fulfillment feature you specify.\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api)..",
+                "description": "Returns a list of inventory items that are eligible for the fulfillment feature you specify.\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, refer to [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api)..",
                 "operationId": "getFeatureInventory",
                 "parameters": [
                     {
@@ -2641,7 +2640,7 @@
                 "tags": [
                     "FBAOutboundV20200701"
                 ],
-                "description": "Returns the number of items with the sellerSKU you specify that can have orders fulfilled using the specified feature. Note that if the sellerSKU isn't eligible, the response will contain an empty skuInfo object. The parameters for this operation may contain special characters that require URL encoding. To avoid errors with SKUs when encoding URLs, refer to [URL Encoding](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/url-encoding).\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api).",
+                "description": "Returns the number of items with the sellerSKU you specify that can have orders fulfilled using the specified feature. Note that if the sellerSKU isn't eligible, the response will contain an empty skuInfo object. The parameters for this operation may contain special characters that require URL encoding. To avoid errors with SKUs when encoding URLs, refer to [URL Encoding](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/url-encoding).\n\n**Usage Plan:**\n\n| Rate (requests per second) | Burst |\n| ---- | ---- |\n| 2 | 30 |\n\nThe `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values than those shown here. For more information, refer to [Usage Plans and Rate Limits in the Selling Partner API](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/usage-plans-and-rate-limits-in-the-sp-api).",
                 "operationId": "getFeatureSKU",
                 "parameters": [
                     {
@@ -2665,7 +2664,7 @@
                     {
                         "name": "sellerSku",
                         "in": "path",
-                        "description": "Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.",
+                        "description": "Used to identify an item in the given marketplace. `SellerSKU` is qualified by the seller's `SellerId`, which is included with every operation that you submit.",
                         "required": true,
                         "schema": {
                             "type": "string"
@@ -2991,7 +2990,7 @@
                     "sellerFulfillmentOrderItemId": {
                         "maxLength": 50,
                         "type": "string",
-                        "description": "A fulfillment order item identifier that the seller creates to track fulfillment order items. Used to disambiguate multiple fulfillment items that have the same SellerSKU. For example, the seller might assign different SellerFulfillmentOrderItemId values to two items in a fulfillment order that share the same SellerSKU but have different GiftMessage values."
+                        "description": "A fulfillment order item identifier that the seller creates to track fulfillment order items. Used to disambiguate multiple fulfillment items that have the same `SellerSKU`. For example, the seller might assign different `SellerFulfillmentOrderItemId` values to two items in a fulfillment order that share the same `SellerSKU` but have different `GiftMessage` values."
                     },
                     "quantity": {
                         "$ref": "#\/components\/schemas\/Quantity"
@@ -3031,7 +3030,7 @@
             },
             "FulfillmentPolicy": {
                 "type": "string",
-                "description": "The FulfillmentPolicy value specified when you submitted the createFulfillmentOrder operation.",
+                "description": "The `FulfillmentPolicy` value specified when you submitted the `createFulfillmentOrder` operation.",
                 "enum": [
                     "FillOrKill",
                     "FillAll",
@@ -3040,7 +3039,7 @@
                 "x-docgen-enum-table-extension": [
                     {
                         "value": "FillOrKill",
-                        "description": "If an item in a fulfillment order is determined to be unfulfillable before any shipment in the order has acquired the status of Pending (the process of picking units from inventory has begun), then the entire order is considered unfulfillable. However, if an item in a fulfillment order is determined to be unfulfillable after a shipment in the order has acquired the status of Pending, Amazon cancels as much of the fulfillment order as possible. See the FulfillmentShipment object for shipment status definitions."
+                        "description": "If an item in a fulfillment order is determined to be unfulfillable before any shipment in the order has acquired the status of Pending (the process of picking units from inventory has begun), then the entire order is considered unfulfillable. However, if an item in a fulfillment order is determined to be unfulfillable after a shipment in the order has acquired the status of Pending, Amazon cancels as much of the fulfillment order as possible. Refer to the `FulfillmentShipment` object for shipment status definitions."
                     },
                     {
                         "value": "FillAll",
@@ -3124,18 +3123,18 @@
                     "sellerFulfillmentOrderId": {
                         "maxLength": 40,
                         "type": "string",
-                        "description": "A fulfillment order identifier that the seller creates to track their fulfillment order. The SellerFulfillmentOrderId must be unique for each fulfillment order that a seller creates. If the seller's system already creates unique order identifiers, then these might be good values for them to use."
+                        "description": "A fulfillment order identifier that the seller creates to track their fulfillment order. The `SellerFulfillmentOrderId` must be unique for each fulfillment order that a seller creates. If the seller's system already creates unique order identifiers, then these might be good values for them to use."
                     },
                     "displayableOrderId": {
                         "maxLength": 40,
                         "type": "string",
-                        "description": "A fulfillment order identifier that the seller creates. This value displays as the order identifier in recipient-facing materials such as the outbound shipment packing slip. The value of DisplayableOrderId should match the order identifier that the seller provides to the recipient. The seller can use the SellerFulfillmentOrderId for this value or they can specify an alternate value if they want the recipient to reference an alternate order identifier.\n\nThe value must be an alpha-numeric or ISO 8859-1 compliant string from one to 40 characters in length. Cannot contain two spaces in a row. Leading and trailing white space is removed."
+                        "description": "A fulfillment order identifier that the seller creates. This value displays as the order identifier in recipient-facing materials such as the outbound shipment packing slip. The value of `DisplayableOrderId` should match the order identifier that the seller provides to the recipient. The seller can use the `SellerFulfillmentOrderId` for this value or they can specify an alternate value if they want the recipient to reference an alternate order identifier.\n\nThe value must be an alpha-numeric or ISO 8859-1 compliant string from one to 40 characters in length. Cannot contain two spaces in a row. Leading and trailing white space is removed."
                     },
                     "displayableOrderDate": {
                         "$ref": "#\/components\/schemas\/Timestamp"
                     },
                     "displayableOrderComment": {
-                        "maxLength": 1000,
+                        "maxLength": 750,
                         "type": "string",
                         "description": "Order-specific text that appears in recipient-facing materials such as the outbound shipment packing slip."
                     },
@@ -3173,9 +3172,12 @@
                     },
                     "items": {
                         "$ref": "#\/components\/schemas\/CreateFulfillmentOrderItemList"
+                    },
+                    "paymentInformation": {
+                        "$ref": "#\/components\/schemas\/PaymentInformationList"
                     }
                 },
-                "description": "The request body schema for the createFulfillmentOrder operation."
+                "description": "The request body schema for the `createFulfillmentOrder` operation."
             },
             "CreateFulfillmentReturnRequest": {
                 "required": [
@@ -3187,7 +3189,7 @@
                         "$ref": "#\/components\/schemas\/CreateReturnItemList"
                     }
                 },
-                "description": "The createFulfillmentReturn operation creates a fulfillment return for items that were fulfilled using the createFulfillmentOrder operation. For calls to createFulfillmentReturn, you must include ReturnReasonCode values returned by a previous call to the listReturnReasonCodes operation."
+                "description": "The `createFulfillmentReturn` operation creates a fulfillment return for items that were fulfilled using the `createFulfillmentOrder` operation. For calls to `createFulfillmentReturn`, you must include `ReturnReasonCode` values returned by a previous call to the `listReturnReasonCodes` operation."
             },
             "CreateFulfillmentReturnResult": {
                 "type": "object",
@@ -3213,7 +3215,7 @@
                         "$ref": "#\/components\/schemas\/ErrorList"
                     }
                 },
-                "description": "The response schema for the createFulfillmentReturn operation."
+                "description": "The response schema for the `createFulfillmentReturn` operation."
             },
             "CreateReturnItem": {
                 "required": [
@@ -3383,7 +3385,7 @@
                 "properties": {
                     "sellerFulfillmentOrderId": {
                         "type": "string",
-                        "description": "The fulfillment order identifier submitted with the createFulfillmentOrder operation."
+                        "description": "The fulfillment order identifier submitted with the `createFulfillmentOrder` operation."
                     },
                     "marketplaceId": {
                         "type": "string",
@@ -3391,14 +3393,14 @@
                     },
                     "displayableOrderId": {
                         "type": "string",
-                        "description": "A fulfillment order identifier submitted with the createFulfillmentOrder operation. Displays as the order identifier in recipient-facing materials such as the packing slip."
+                        "description": "A fulfillment order identifier submitted with the `createFulfillmentOrder` operation. Displays as the order identifier in recipient-facing materials such as the packing slip."
                     },
                     "displayableOrderDate": {
                         "$ref": "#\/components\/schemas\/Timestamp"
                     },
                     "displayableOrderComment": {
                         "type": "string",
-                        "description": "A text block submitted with the createFulfillmentOrder operation. Displays in recipient-facing materials such as the packing slip."
+                        "description": "A text block submitted with the `createFulfillmentOrder` operation. Displays in recipient-facing materials such as the packing slip."
                     },
                     "shippingSpeedCategory": {
                         "$ref": "#\/components\/schemas\/ShippingSpeedCategory"
@@ -3456,7 +3458,7 @@
                     },
                     "sellerFulfillmentOrderItemId": {
                         "type": "string",
-                        "description": "A fulfillment order item identifier submitted with a call to the createFulfillmentOrder operation."
+                        "description": "A fulfillment order item identifier submitted with a call to the `createFulfillmentOrder` operation."
                     },
                     "quantity": {
                         "$ref": "#\/components\/schemas\/Quantity"
@@ -3577,7 +3579,7 @@
                     },
                     "sellerFulfillmentOrderItemId": {
                         "type": "string",
-                        "description": "A fulfillment order item identifier that the seller created with a call to the createFulfillmentOrder operation."
+                        "description": "A fulfillment order item identifier that the seller created with a call to the `createFulfillmentOrder` operation."
                     },
                     "estimatedShippingWeight": {
                         "$ref": "#\/components\/schemas\/Weight"
@@ -3714,7 +3716,7 @@
                             },
                             {
                                 "value": "CANCELLED_BY_SELLER",
-                                "description": "The shipment was cancelled using the CancelFulfillmentOrder request."
+                                "description": "The shipment was cancelled using the `CancelFulfillmentOrder` request."
                             }
                         ]
                     },
@@ -3754,7 +3756,7 @@
                     },
                     "sellerFulfillmentOrderItemId": {
                         "type": "string",
-                        "description": "The fulfillment order item identifier that the seller created and submitted with a call to the createFulfillmentOrder operation."
+                        "description": "The fulfillment order item identifier that the seller created and submitted with a call to the `createFulfillmentOrder` operation."
                     },
                     "quantity": {
                         "$ref": "#\/components\/schemas\/Quantity"
@@ -3841,6 +3843,9 @@
                     },
                     "returnAuthorizations": {
                         "$ref": "#\/components\/schemas\/ReturnAuthorizationList"
+                    },
+                    "paymentInformation": {
+                        "$ref": "#\/components\/schemas\/PaymentInformationList"
                     }
                 }
             },
@@ -3854,7 +3859,7 @@
                         "$ref": "#\/components\/schemas\/ErrorList"
                     }
                 },
-                "description": "The response schema for the getFulfillmentOrder operation."
+                "description": "The response schema for the `getFulfillmentOrder` operation."
             },
             "GetFulfillmentPreviewItem": {
                 "required": [
@@ -3916,7 +3921,7 @@
                     },
                     "includeDeliveryWindows": {
                         "type": "boolean",
-                        "description": "When true, returns the ScheduledDeliveryInfo response object, which contains the available delivery windows for a Scheduled Delivery. The ScheduledDeliveryInfo response object can only be returned for fulfillment order previews with ShippingSpeedCategories = ScheduledDelivery."
+                        "description": "When true, returns the `ScheduledDeliveryInfo` response object, which contains the available delivery windows for a Scheduled Delivery. The `ScheduledDeliveryInfo` response object can only be returned for fulfillment order previews with `ShippingSpeedCategories` = `ScheduledDelivery`."
                     },
                     "featureConstraints": {
                         "type": "array",
@@ -3926,7 +3931,7 @@
                         }
                     }
                 },
-                "description": "The request body schema for the getFulfillmentPreview operation."
+                "description": "The request body schema for the `getFulfillmentPreview` operation."
             },
             "GetFulfillmentPreviewResult": {
                 "type": "object",
@@ -3947,7 +3952,7 @@
                         "$ref": "#\/components\/schemas\/ErrorList"
                     }
                 },
-                "description": "The response schema for the getFulfillmentPreview operation."
+                "description": "The response schema for the `getFulfillmentPreview` operation."
             },
             "InvalidItemReasonCode": {
                 "type": "string",
@@ -4049,7 +4054,7 @@
                         "$ref": "#\/components\/schemas\/ErrorList"
                     }
                 },
-                "description": "The response schema for the listAllFulfillmentOrders operation."
+                "description": "The response schema for the `listAllFulfillmentOrders` operation."
             },
             "ListReturnReasonCodesResult": {
                 "type": "object",
@@ -4069,7 +4074,7 @@
                         "$ref": "#\/components\/schemas\/ErrorList"
                     }
                 },
-                "description": "The response schema for the listReturnReasonCodes operation."
+                "description": "The response schema for the `listReturnReasonCodes` operation."
             },
             "NotificationEmailList": {
                 "type": "array",
@@ -4360,7 +4365,7 @@
                     },
                     "currentStatusDescription": {
                         "type": "string",
-                        "description": "Description corresponding to the CurrentStatus value."
+                        "description": "Description corresponding to the `CurrentStatus` value."
                     },
                     "signedForBy": {
                         "type": "string",
@@ -4384,7 +4389,7 @@
                         "$ref": "#\/components\/schemas\/ErrorList"
                     }
                 },
-                "description": "The response schema for the getPackageTrackingDetails operation."
+                "description": "The response schema for the `getPackageTrackingDetails` operation."
             },
             "ReasonCodeDetails": {
                 "required": [
@@ -4414,6 +4419,28 @@
                 "items": {
                     "$ref": "#\/components\/schemas\/ReasonCodeDetails"
                 }
+            },
+            "PaymentInformation": {
+                "required": [
+                    "paymentDate",
+                    "paymentMode",
+                    "paymentTransactionId"
+                ],
+                "type": "object",
+                "properties": {
+                    "paymentTransactionId": {
+                        "type": "string",
+                        "description": "The transaction identifier of this payment."
+                    },
+                    "paymentMode": {
+                        "type": "string",
+                        "description": "The transaction mode of this payment."
+                    },
+                    "paymentDate": {
+                        "$ref": "#\/components\/schemas\/Timestamp"
+                    }
+                },
+                "description": "The attributes related to the payment made from customer to seller for this order."
             },
             "ReturnAuthorization": {
                 "required": [
@@ -4446,6 +4473,13 @@
                     }
                 },
                 "description": "Return authorization information for items accepted for return."
+            },
+            "PaymentInformationList": {
+                "type": "array",
+                "description": "An array of various payment attributes related to this fulfillment order.",
+                "items": {
+                    "$ref": "#\/components\/schemas\/PaymentInformation"
+                }
             },
             "ReturnAuthorizationList": {
                 "type": "array",
@@ -4497,7 +4531,7 @@
                     },
                     "returnAuthorizationId": {
                         "type": "string",
-                        "description": "Identifies the return authorization used to return this item. See ReturnAuthorization."
+                        "description": "Identifies the return authorization used to return this item. Refer to `ReturnAuthorization`."
                     },
                     "returnReceivedCondition": {
                         "$ref": "#\/components\/schemas\/ReturnItemDisposition"
@@ -4832,7 +4866,7 @@
                     "sellerFulfillmentOrderItemId": {
                         "maxLength": 50,
                         "type": "string",
-                        "description": "A fulfillment order item identifier created with a call to the getFulfillmentPreview operation."
+                        "description": "A fulfillment order item identifier created with a call to the `getFulfillmentPreview` operation."
                     },
                     "itemUnfulfillableReasons": {
                         "$ref": "#\/components\/schemas\/StringList"
@@ -4861,7 +4895,7 @@
                     "sellerFulfillmentOrderItemId": {
                         "maxLength": 50,
                         "type": "string",
-                        "description": "Identifies the fulfillment order item to update. Created with a previous call to the createFulfillmentOrder operation."
+                        "description": "Identifies the fulfillment order item to update. Created with a previous call to the `createFulfillmentOrder` operation."
                     },
                     "quantity": {
                         "$ref": "#\/components\/schemas\/Quantity"
@@ -4913,13 +4947,13 @@
                     "displayableOrderId": {
                         "maxLength": 40,
                         "type": "string",
-                        "description": "A fulfillment order identifier that the seller creates. This value displays as the order identifier in recipient-facing materials such as the outbound shipment packing slip. The value of DisplayableOrderId should match the order identifier that the seller provides to the recipient. The seller can use the SellerFulfillmentOrderId for this value or they can specify an alternate value if they want the recipient to reference an alternate order identifier."
+                        "description": "A fulfillment order identifier that the seller creates. This value displays as the order identifier in recipient-facing materials such as the outbound shipment packing slip. The value of `DisplayableOrderId` should match the order identifier that the seller provides to the recipient. The seller can use the `SellerFulfillmentOrderId` for this value or they can specify an alternate value if they want the recipient to reference an alternate order identifier."
                     },
                     "displayableOrderDate": {
                         "$ref": "#\/components\/schemas\/Timestamp"
                     },
                     "displayableOrderComment": {
-                        "maxLength": 1000,
+                        "maxLength": 750,
                         "type": "string",
                         "description": "Order-specific text that appears in recipient-facing materials such as the outbound shipment packing slip."
                     },
@@ -4953,7 +4987,7 @@
                         "$ref": "#\/components\/schemas\/UpdateFulfillmentOrderItemList"
                     }
                 },
-                "description": "The request body schema for the updateFulfillmentOrder operation."
+                "description": "The request body schema for the `updateFulfillmentOrder` operation."
             },
             "UpdateFulfillmentOrderResponse": {
                 "type": "object",
@@ -4962,7 +4996,7 @@
                         "$ref": "#\/components\/schemas\/ErrorList"
                     }
                 },
-                "description": "The response schema for the updateFulfillmentOrder operation."
+                "description": "The response schema for the `updateFulfillmentOrder` operation."
             },
             "CreateFulfillmentOrderResponse": {
                 "type": "object",
@@ -4971,7 +5005,7 @@
                         "$ref": "#\/components\/schemas\/ErrorList"
                     }
                 },
-                "description": "The response schema for the createFulfillmentOrder operation."
+                "description": "The response schema for the `createFulfillmentOrder` operation."
             },
             "CancelFulfillmentOrderResponse": {
                 "type": "object",
@@ -4980,7 +5014,7 @@
                         "$ref": "#\/components\/schemas\/ErrorList"
                     }
                 },
-                "description": "The response schema for the cancelFulfillmentOrder operation."
+                "description": "The response schema for the `cancelFulfillmentOrder` operation."
             },
             "Weight": {
                 "required": [
@@ -5031,7 +5065,7 @@
             },
             "ShippingSpeedCategory": {
                 "type": "string",
-                "description": "The shipping method used for the fulfillment order. When this value is ScheduledDelivery, choose Ship for the fulfillmentAction. Hold is not a valid fulfillmentAction value when the shippingSpeedCategory value is ScheduledDelivery.",
+                "description": "The shipping method used for the fulfillment order. When this value is `ScheduledDelivery`, choose Ship for the `fulfillmentAction`. Hold is not a valid `fulfillmentAction` value when the `shippingSpeedCategory` value is `ScheduledDelivery`.",
                 "enum": [
                     "Standard",
                     "Expedited",
@@ -5096,14 +5130,14 @@
                         }
                     }
                 },
-                "description": "The payload for the getEligibileInventory operation."
+                "description": "The payload for the `getEligibileInventory` operation."
             },
             "FeatureSku": {
                 "type": "object",
                 "properties": {
                     "sellerSku": {
                         "type": "string",
-                        "description": "Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit."
+                        "description": "Used to identify an item in the given marketplace. `SellerSKU` is qualified by the seller's SellerId, which is included with every operation that you submit."
                     },
                     "fnSku": {
                         "type": "string",
@@ -5137,7 +5171,7 @@
                         "$ref": "#\/components\/schemas\/ErrorList"
                     }
                 },
-                "description": "The response schema for the getFeatures operation."
+                "description": "The response schema for the `getFeatures` operation."
             },
             "GetFeaturesResult": {
                 "required": [
@@ -5149,7 +5183,7 @@
                         "$ref": "#\/components\/schemas\/Features"
                     }
                 },
-                "description": "The payload for the getFeatures operation."
+                "description": "The payload for the `getFeatures` operation."
             },
             "Features": {
                 "type": "array",
@@ -5190,7 +5224,7 @@
                         "$ref": "#\/components\/schemas\/ErrorList"
                     }
                 },
-                "description": "The response schema for the getFeatureSKU operation."
+                "description": "The response schema for the `getFeatureSKU` operation."
             },
             "GetFeatureSkuResult": {
                 "required": [
@@ -5214,7 +5248,7 @@
                     },
                     "ineligibleReasons": {
                         "type": "array",
-                        "description": "A list of one or more reasons that the seller SKU is ineligibile for the feature.\n\nPossible values:\n* MERCHANT_NOT_ENROLLED - The merchant isn't enrolled for the feature.\n* SKU_NOT_ELIGIBLE - The SKU doesn't reside in a warehouse that supports the feature.\n* INVALID_SKU - There is an issue with the SKU provided.",
+                        "description": "A list of one or more reasons that the seller SKU is ineligibile for the feature.\n\nPossible values:\n* `MERCHANT_NOT_ENROLLED` - The merchant isn't enrolled for the feature.\n* `SKU_NOT_ELIGIBLE` - The SKU doesn't reside in a warehouse that supports the feature.\n* `INVALID_SKU` - There is an issue with the SKU provided.",
                         "items": {
                             "type": "string"
                         }
@@ -5223,7 +5257,7 @@
                         "$ref": "#\/components\/schemas\/FeatureSku"
                     }
                 },
-                "description": "The payload for the getFeatureSKU operation."
+                "description": "The payload for the `getFeatureSKU` operation."
             },
             "FeatureSettings": {
                 "type": "object",
@@ -5251,7 +5285,7 @@
                         ]
                     }
                 },
-                "description": "FeatureSettings allows users to apply fulfillment features to an order. To block an order from being shipped using Amazon Logistics (AMZL) and an AMZL tracking number, use featureName as BLOCK_AMZL and featureFulfillmentPolicy as Required. Blocking AMZL will incur an additional fee surcharge on your MCF orders and increase the risk of some of your orders being unfulfilled or delivered late if there are no alternative carriers available. Using BLOCK_AMZL in an order request will take precedence over your Seller Central account setting. To ship in non-Amazon branded packaging (blank boxes), use featureName BLANK_BOX."
+                "description": "`FeatureSettings` allows users to apply fulfillment features to an order. To block an order from being shipped using Amazon Logistics (AMZL) and an AMZL tracking number, use `featureName` as `BLOCK_AMZL` and `featureFulfillmentPolicy` as `Required`. Blocking AMZL will incur an additional fee surcharge on your MCF orders and increase the risk of some of your orders being unfulfilled or delivered late if there are no alternative carriers available. Using `BLOCK_AMZL` in an order request will take precedence over your Seller Central account setting. To ship in non-Amazon branded packaging (blank boxes), use featureName `BLANK_BOX`."
             },
             "SubmitFulfillmentOrderStatusUpdateRequest": {
                 "type": "object",
@@ -5260,7 +5294,7 @@
                         "$ref": "#\/components\/schemas\/FulfillmentOrderStatus"
                     }
                 },
-                "description": "The request body schema for the submitFulfillmentOrderStatusUpdate operation."
+                "description": "The request body schema for the `submitFulfillmentOrderStatusUpdate` operation."
             },
             "SubmitFulfillmentOrderStatusUpdateResponse": {
                 "type": "object",
@@ -5269,7 +5303,7 @@
                         "$ref": "#\/components\/schemas\/ErrorList"
                     }
                 },
-                "description": "The response schema for the SubmitFulfillmentOrderStatusUpdate operation."
+                "description": "The response schema for the `SubmitFulfillmentOrderStatusUpdate` operation."
             }
         }
     },

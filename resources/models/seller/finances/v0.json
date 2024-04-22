@@ -39,7 +39,7 @@
                     {
                         "name": "FinancialEventGroupStartedBefore",
                         "in": "query",
-                        "description": "A date used for selecting financial event groups that opened before (but not at) a specified date and time, in ISO 8601 format. The date-time  must be later than FinancialEventGroupStartedAfter and no later than two minutes before the request was submitted. If FinancialEventGroupStartedAfter and FinancialEventGroupStartedBefore are more than 180 days apart, no financial event groups are returned.",
+                        "description": "A date used for selecting financial event groups that opened before (but not at) a specified date and time, in [ISO 8601](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/iso-8601) format. The date-time  must be later than FinancialEventGroupStartedAfter and no later than two minutes before the request was submitted. If FinancialEventGroupStartedAfter and FinancialEventGroupStartedBefore are more than 180 days apart, no financial event groups are returned.",
                         "schema": {
                             "type": "string",
                             "format": "date-time"
@@ -48,7 +48,7 @@
                     {
                         "name": "FinancialEventGroupStartedAfter",
                         "in": "query",
-                        "description": "A date used for selecting financial event groups that opened after (or at) a specified date and time, in ISO 8601 format. The date-time must be no later than two minutes before the request was submitted.",
+                        "description": "A date used for selecting financial event groups that opened after (or at) a specified date and time, in [ISO 8601](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/iso-8601) format. The date-time must be no later than two minutes before the request was submitted.",
                         "schema": {
                             "type": "string",
                             "format": "date-time"
@@ -293,7 +293,7 @@
                     {
                         "name": "PostedAfter",
                         "in": "query",
-                        "description": "A date used for selecting financial events posted after (or at) a specified time. The date-time **must** be more than two minutes before the time of the request, in ISO 8601 date time format.",
+                        "description": "A date used for selecting financial events posted after (or at) a specified time. The date-time **must** be more than two minutes before the time of the request, in [ISO 8601](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/iso-8601) date time format.",
                         "schema": {
                             "type": "string",
                             "format": "date-time"
@@ -302,7 +302,7 @@
                     {
                         "name": "PostedBefore",
                         "in": "query",
-                        "description": "A date used for selecting financial events posted before (but not at) a specified time. The date-time must be later than `PostedAfter` and no later than two minutes before the request was submitted, in ISO 8601 date time format. If `PostedAfter` and `PostedBefore` are more than 180 days apart, no financial events are returned. You must specify the `PostedAfter` parameter if you specify the `PostedBefore` parameter. Default: Now minus two minutes.",
+                        "description": "A date used for selecting financial events posted before (but not at) a specified time. The date-time must be later than `PostedAfter` and no later than two minutes before the request was submitted, in [ISO 8601](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/iso-8601) date time format. If `PostedAfter` and `PostedBefore` are more than 180 days apart, no financial events are returned. You must specify the `PostedAfter` parameter if you specify the `PostedBefore` parameter. Default: Now minus two minutes.",
                         "schema": {
                             "type": "string",
                             "format": "date-time"
@@ -1207,7 +1207,7 @@
                     {
                         "name": "PostedAfter",
                         "in": "query",
-                        "description": "A date used for selecting financial events posted after (or at) a specified time. The date-time must be no later than two minutes before the request was submitted, in ISO 8601 date time format.",
+                        "description": "A date used for selecting financial events posted after (or at) a specified time. The date-time must be no later than two minutes before the request was submitted, in [ISO 8601](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/iso-8601) date time format.",
                         "schema": {
                             "type": "string",
                             "format": "date-time"
@@ -1216,7 +1216,7 @@
                     {
                         "name": "PostedBefore",
                         "in": "query",
-                        "description": "A date used for selecting financial events posted before (but not at) a specified time. The date-time must be later than PostedAfter and no later than two minutes before the request was submitted, in ISO 8601 date time format. If PostedAfter and PostedBefore are more than 180 days apart, no financial events are returned. You must specify the PostedAfter parameter if you specify the PostedBefore parameter. Default: Now minus two minutes.",
+                        "description": "A date used for selecting financial events posted before (but not at) a specified time. The date-time must be later than PostedAfter and no later than two minutes before the request was submitted, in [ISO 8601](https:\/\/developer-docs.amazon.com\/sp-api\/docs\/iso-8601) date time format. If PostedAfter and PostedBefore are more than 180 days apart, no financial events are returned. You must specify the PostedAfter parameter if you specify the PostedBefore parameter. Default: Now minus two minutes.",
                         "schema": {
                             "type": "string",
                             "format": "date-time"
@@ -1761,7 +1761,7 @@
             },
             "ChargeRefundTransactions": {
                 "type": "array",
-                "description": "A list of `ChargeRefund` transactions.",
+                "description": "A list of `ChargeRefund` transactions",
                 "items": {
                     "$ref": "#\/components\/schemas\/ChargeRefundTransaction"
                 }

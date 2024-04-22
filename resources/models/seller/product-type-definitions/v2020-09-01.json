@@ -116,11 +116,7 @@
                                             ]
                                         }
                                     ],
-                                    "productTypeVersion": {
-                                        "version": "UHqSqmb4FNUk=",
-                                        "latest": true,
-                                        "releaseCandidate": false
-                                    }
+                                    "productTypeVersion": "UHqSqmb4FNUk="
                                 }
                             }
                         },
@@ -140,11 +136,7 @@
                                                 ]
                                             }
                                         ],
-                                        "productTypeVersion": {
-                                            "version": "UHqSqmb4FNUk=",
-                                            "latest": true,
-                                            "releaseCandidate": false
-                                        }
+                                        "productTypeVersion": "UHqSqmb4FNUk="
                                     }
                                 }
                             ]
@@ -1437,7 +1429,8 @@
                         }
                     },
                     "productTypeVersion": {
-                        "$ref": "#\/components\/schemas\/ProductTypeVersion"
+                        "type": "string",
+                        "description": "Amazon product type version identifier."
                     }
                 },
                 "description": "A list of Amazon product types with definitions available."
