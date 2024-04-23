@@ -23,7 +23,7 @@ final class PlacementOption extends BaseDto
 		public readonly string $placementOptionId,
 		public readonly array $shipmentIds,
 		public readonly string $status,
-		public readonly ?\DateTime $expiration = null,
+		public readonly ?bool $expiration = null,
 	) {
 	}
 }
