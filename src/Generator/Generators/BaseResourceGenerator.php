@@ -1,20 +1,18 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Generator\Generators;
 
 use Crescat\SaloonSdkGenerator\Data\Generator\ApiSpecification;
-use Crescat\SaloonSdkGenerator\Generators\BaseResourceGenerator as SDKGenerator;
+use Crescat\SaloonSdkGenerator\Generator;
 use Nette\PhpGenerator\ClassType;
 use Nette\PhpGenerator\PhpFile;
 use SellingPartnerApi\SellingPartnerApi;
 
-class BaseResourceGenerator extends SDKGenerator
+class BaseResourceGenerator extends Generator
 {
     public function generate(ApiSpecification $specification): PhpFile|array
     {
-        $classType = new ClassType(static::$baseClsName);
+        $classType = new ClassType('BaseResource');
         $classType
             ->addMethod('__construct')
             ->addPromotedParameter('connector')
@@ -22,8 +20,8 @@ class BaseResourceGenerator extends SDKGenerator
             ->setProtected();
 
         $classFile = new PhpFile();
-        $classFile->setStrictTypes()
-            ->addNamespace(PACKAGE_NAMESPACE)
+        $namespace = $this->config->baseResourceNamespace ?? $this->config->namespace;
+        $classFile->addNamespace($namespace)
             ->addUse(SellingPartnerApi::class)
             ->add($classType);
 

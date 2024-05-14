@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 namespace SellingPartnerApi\Generator\Generators;
 
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use Crescat\SaloonSdkGenerator\Data\Generator\ApiSpecification;
 use Crescat\SaloonSdkGenerator\Data\Generator\Config;
 use Crescat\SaloonSdkGenerator\Data\Generator\Schema;
 use Crescat\SaloonSdkGenerator\Enums\SimpleType;
-use Crescat\SaloonSdkGenerator\Generators\ResponseGenerator as SDKGenerator;
+use Crescat\SaloonSdkGenerator\Generator as ApiGenerator;
 use Crescat\SaloonSdkGenerator\Helpers\MethodGeneratorHelper;
 use Crescat\SaloonSdkGenerator\Helpers\NameHelper;
 use Crescat\SaloonSdkGenerator\Helpers\Utils;
@@ -17,7 +18,7 @@ use Nette\PhpGenerator\Literal;
 use Nette\PhpGenerator\PhpFile;
 use SellingPartnerApi\Generator\Generator;
 
-class ResponseGenerator extends SDKGenerator
+class ResponseGenerator extends ApiGenerator
 {
     public array $traits = [];
 
@@ -43,14 +44,13 @@ class ResponseGenerator extends SDKGenerator
     public function generateResponseClass(Schema $schema): PhpFile
     {
         $className = NameHelper::responseClassName($schema->name);
-        [$classFile, $namespace, $classType] = $this->makeClass($className, $this->config->namespaceSuffixes['response']);
+        [$classFile, $namespace, $classType] = $this->makeClass($className, $this->config->responseNamespaceSuffix);
 
-        $baseResponseFqn = $this->baseClassFqn();
-        $namespace->addUse($baseResponseFqn);
+        $namespace->addUse(BaseResponse::class);
 
         $classType
             ->setFinal()
-            ->setExtends($baseResponseFqn);
+            ->setExtends(BaseResponse::class);
 
         $classConstructor = $classType->addMethod('__construct');
 
