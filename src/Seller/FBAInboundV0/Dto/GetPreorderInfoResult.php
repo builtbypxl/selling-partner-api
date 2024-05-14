@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBAInboundV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class GetPreorderInfoResult extends Dto
+final class GetPreorderInfoResult extends BaseDto
 {
     protected static array $attributeMap = [
         'shipmentContainsPreorderableItems' => 'ShipmentContainsPreorderableItems',

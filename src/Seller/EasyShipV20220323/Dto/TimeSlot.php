@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\EasyShipV20220323\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class TimeSlot extends Dto
+final class TimeSlot extends BaseDto
 {
     /**
      * @param  string  $slotId  A string of up to 255 characters.

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FinancesV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class SolutionProviderCreditEvent extends Dto
+final class SolutionProviderCreditEvent extends BaseDto
 {
     protected static array $attributeMap = [
         'providerTransactionType' => 'ProviderTransactionType',

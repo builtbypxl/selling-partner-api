@@ -1,13 +1,11 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\APlusContentV20201101\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Seller\APlusContentV20201101\Dto\Error;
 
-final class ValidateContentDocumentAsinRelationsResponse extends Response
+final class ValidateContentDocumentAsinRelationsResponse extends BaseResponse
 {
     protected static array $complexArrayTypes = ['errors' => [Error::class], 'warnings' => [Error::class]];
 

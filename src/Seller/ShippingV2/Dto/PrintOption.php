@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ShippingV2\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class PrintOption extends Dto
+final class PrintOption extends BaseDto
 {
     protected static array $attributeMap = ['supportedDpIs' => 'supportedDPIs'];
 

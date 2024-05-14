@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ServicesV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ServiceJobProvider extends Dto
+final class ServiceJobProvider extends BaseDto
 {
     /**
      * @param  ?string  $serviceJobProviderId  The identifier of the service job provider.

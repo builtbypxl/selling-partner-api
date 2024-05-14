@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\APlusContentV20201101\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class StandardCompanyLogoModule extends Dto
+final class StandardCompanyLogoModule extends BaseDto
 {
     /**
      * @param  ImageComponent  $companyLogo  A reference to an image, hosted in the A+ Content media library.

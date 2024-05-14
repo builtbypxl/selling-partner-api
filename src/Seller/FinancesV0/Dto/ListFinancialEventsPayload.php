@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FinancesV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ListFinancialEventsPayload extends Dto
+final class ListFinancialEventsPayload extends BaseDto
 {
     protected static array $attributeMap = ['nextToken' => 'NextToken', 'financialEvents' => 'FinancialEvents'];
 

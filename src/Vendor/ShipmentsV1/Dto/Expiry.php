@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\ShipmentsV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class Expiry extends Dto
+final class Expiry extends BaseDto
 {
     /**
      * @param  ?DateTime  $manufacturerDate  Production, packaging or assembly date determined by the manufacturer. Its meaning is determined based on the trade item context.

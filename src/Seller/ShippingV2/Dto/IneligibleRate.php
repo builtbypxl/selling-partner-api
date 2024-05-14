@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ShippingV2\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class IneligibleRate extends Dto
+final class IneligibleRate extends BaseDto
 {
     protected static array $complexArrayTypes = ['ineligibilityReasons' => [IneligibilityReason::class]];
 

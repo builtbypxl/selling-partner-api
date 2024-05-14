@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\SupplySourcesV20200701\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ThroughputCap extends Dto
+final class ThroughputCap extends BaseDto
 {
     /**
      * @param  ?int  $value  An unsigned integer that can be only positive or zero.

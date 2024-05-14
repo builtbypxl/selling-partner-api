@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\NotificationsV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class Destination extends Dto
+final class Destination extends BaseDto
 {
     /**
      * @param  string  $name  The developer-defined name for this destination.

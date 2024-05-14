@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ServicesV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ItemDeliveryPromise extends Dto
+final class ItemDeliveryPromise extends BaseDto
 {
     /**
      * @param  ?DateTime  $startTime  The date and time of the start of the promised delivery window in ISO 8601 format.

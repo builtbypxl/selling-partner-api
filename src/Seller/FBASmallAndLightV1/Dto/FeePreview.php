@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBASmallAndLightV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class FeePreview extends Dto
+final class FeePreview extends BaseDto
 {
     protected static array $complexArrayTypes = ['feeBreakdown' => [FeeLineItem::class], 'errors' => [Error::class]];
 

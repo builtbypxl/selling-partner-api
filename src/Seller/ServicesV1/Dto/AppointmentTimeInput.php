@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ServicesV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class AppointmentTimeInput extends Dto
+final class AppointmentTimeInput extends BaseDto
 {
     /**
      * @param  DateTime  $startTime  The date, time in UTC for the start time of an appointment in ISO 8601 format.

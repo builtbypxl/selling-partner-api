@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\MerchantFulfillmentV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class GetAdditionalSellerInputsRequest extends Dto
+final class GetAdditionalSellerInputsRequest extends BaseDto
 {
     protected static array $attributeMap = [
         'shippingServiceId' => 'ShippingServiceId',

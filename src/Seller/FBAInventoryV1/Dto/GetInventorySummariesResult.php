@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBAInventoryV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class GetInventorySummariesResult extends Dto
+final class GetInventorySummariesResult extends BaseDto
 {
     protected static array $complexArrayTypes = ['inventorySummaries' => [InventorySummary::class]];
 

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ServicesV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ScopeOfWork extends Dto
+final class ScopeOfWork extends BaseDto
 {
     /**
      * @param  ?string  $asin  The Amazon Standard Identification Number (ASIN) of the service job.

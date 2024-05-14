@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ShippingV2\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class TimeWindow extends Dto
+final class TimeWindow extends BaseDto
 {
     /**
      * @param  ?DateTime  $start  The start time of the time window.

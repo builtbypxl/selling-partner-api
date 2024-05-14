@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ReportsV20210630\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 
-final class ReportScheduleList extends Response
+final class ReportScheduleList extends BaseResponse
 {
     protected static array $complexArrayTypes = ['reportSchedules' => [ReportSchedule::class]];
 

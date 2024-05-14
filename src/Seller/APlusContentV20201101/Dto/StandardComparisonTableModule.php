@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\APlusContentV20201101\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class StandardComparisonTableModule extends Dto
+final class StandardComparisonTableModule extends BaseDto
 {
     protected static array $complexArrayTypes = [
         'productColumns' => [StandardComparisonProductBlock::class],

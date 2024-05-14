@@ -1,14 +1,12 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentInventoryV1\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Vendor\DirectFulfillmentInventoryV1\Dto\Error;
 use SellingPartnerApi\Vendor\DirectFulfillmentInventoryV1\Dto\TransactionReference;
 
-final class SubmitInventoryUpdateResponse extends Response
+final class SubmitInventoryUpdateResponse extends BaseResponse
 {
     protected static array $complexArrayTypes = ['errors' => [Error::class]];
 

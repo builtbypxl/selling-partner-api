@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentShippingV20211228\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class TaxRegistrationDetails extends Dto
+final class TaxRegistrationDetails extends BaseDto
 {
     /**
      * @param  string  $taxRegistrationNumber  Tax registration number for the party. For example, VAT ID.

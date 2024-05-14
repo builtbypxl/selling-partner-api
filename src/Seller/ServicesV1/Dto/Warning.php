@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ServicesV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class Warning extends Dto
+final class Warning extends BaseDto
 {
     /**
      * @param  string  $code  An warning code that identifies the type of warning that occurred.

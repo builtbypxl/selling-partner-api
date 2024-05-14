@@ -1,14 +1,12 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBAOutboundV20200701\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Seller\FBAOutboundV20200701\Dto\Error;
 use SellingPartnerApi\Seller\FBAOutboundV20200701\Dto\ListReturnReasonCodesResult;
 
-final class ListReturnReasonCodesResponse extends Response
+final class ListReturnReasonCodesResponse extends BaseResponse
 {
     protected static array $complexArrayTypes = ['errors' => [Error::class]];
 

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ServicesV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class RangeSlot extends Dto
+final class RangeSlot extends BaseDto
 {
     /**
      * @param  ?DateTime  $startDateTime  Start date time of slot in ISO 8601 format with precision of seconds.

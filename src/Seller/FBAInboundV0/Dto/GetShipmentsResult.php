@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBAInboundV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class GetShipmentsResult extends Dto
+final class GetShipmentsResult extends BaseDto
 {
     protected static array $attributeMap = ['shipmentData' => 'ShipmentData', 'nextToken' => 'NextToken'];
 

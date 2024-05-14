@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\EasyShipV20220323\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class UpdateScheduledPackagesRequest extends Dto
+final class UpdateScheduledPackagesRequest extends BaseDto
 {
     protected static array $complexArrayTypes = ['updatePackageDetailsList' => [UpdatePackageDetails::class]];
 

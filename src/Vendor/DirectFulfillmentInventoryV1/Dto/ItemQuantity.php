@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentInventoryV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ItemQuantity extends Dto
+final class ItemQuantity extends BaseDto
 {
     /**
      * @param  string  $unitOfMeasure  Unit of measure for the available quantity.

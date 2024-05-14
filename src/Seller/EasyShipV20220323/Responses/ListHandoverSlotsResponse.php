@@ -1,13 +1,11 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\EasyShipV20220323\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Seller\EasyShipV20220323\Dto\TimeSlot;
 
-final class ListHandoverSlotsResponse extends Response
+final class ListHandoverSlotsResponse extends BaseResponse
 {
     protected static array $complexArrayTypes = ['timeSlots' => [TimeSlot::class]];
 

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\APlusContentV20201101\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class PostContentDocumentAsinRelationsRequest extends Dto
+final class PostContentDocumentAsinRelationsRequest extends BaseDto
 {
     /**
      * @param  string[]  $asinSet  The set of ASINs.

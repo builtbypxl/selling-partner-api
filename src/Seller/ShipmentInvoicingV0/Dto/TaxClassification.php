@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ShipmentInvoicingV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class TaxClassification extends Dto
+final class TaxClassification extends BaseDto
 {
     protected static array $attributeMap = ['name' => 'Name', 'value' => 'Value'];
 

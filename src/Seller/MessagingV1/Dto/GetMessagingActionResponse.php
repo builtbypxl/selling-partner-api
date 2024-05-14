@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\MessagingV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class GetMessagingActionResponse extends Dto
+final class GetMessagingActionResponse extends BaseDto
 {
     protected static array $attributeMap = ['links' => '_links', 'embedded' => '_embedded'];
 

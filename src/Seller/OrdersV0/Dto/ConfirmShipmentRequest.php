@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\OrdersV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ConfirmShipmentRequest extends Dto
+final class ConfirmShipmentRequest extends BaseDto
 {
     /**
      * @param  PackageDetail  $packageDetail  Properties of packages

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ProductFeesV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class FeesEstimateError extends Dto
+final class FeesEstimateError extends BaseDto
 {
     protected static array $attributeMap = [
         'type' => 'Type',

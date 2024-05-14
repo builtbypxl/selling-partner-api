@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\SupplySourcesV20200701\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ParkingConfiguration extends Dto
+final class ParkingConfiguration extends BaseDto
 {
     /**
      * @param  ?string  $parkingCostType  The parking cost type.

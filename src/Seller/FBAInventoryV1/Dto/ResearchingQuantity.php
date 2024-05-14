@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBAInventoryV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ResearchingQuantity extends Dto
+final class ResearchingQuantity extends BaseDto
 {
     protected static array $complexArrayTypes = ['researchingQuantityBreakdown' => [ResearchingQuantityEntry::class]];
 

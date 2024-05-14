@@ -1,14 +1,12 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBAInboundV0\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Seller\FBAInboundV0\Dto\ConfirmPreorderResult;
 use SellingPartnerApi\Seller\FBAInboundV0\Dto\Error;
 
-final class ConfirmPreorderResponse extends Response
+final class ConfirmPreorderResponse extends BaseResponse
 {
     protected static array $complexArrayTypes = ['errors' => [Error::class]];
 

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\CatalogItemsV20220401\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class BrandRefinement extends Dto
+final class BrandRefinement extends BaseDto
 {
     /**
      * @param  int  $numberOfResults  The estimated number of results that would still be returned if refinement key applied.

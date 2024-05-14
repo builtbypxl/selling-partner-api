@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentShippingV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class PackingSlipList extends Dto
+final class PackingSlipList extends BaseDto
 {
     protected static array $complexArrayTypes = ['packingSlips' => [PackingSlip::class]];
 

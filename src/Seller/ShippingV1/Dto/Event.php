@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ShippingV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class Event extends Dto
+final class Event extends BaseDto
 {
     /**
      * @param  string  $eventCode  The event code of a shipment, such as Departed, Received, and ReadyForReceive.

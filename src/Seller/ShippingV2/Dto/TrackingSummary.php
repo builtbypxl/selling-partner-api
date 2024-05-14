@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ShippingV2\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class TrackingSummary extends Dto
+final class TrackingSummary extends BaseDto
 {
     /**
      * @param  ?string  $status  The status of the package being shipped.

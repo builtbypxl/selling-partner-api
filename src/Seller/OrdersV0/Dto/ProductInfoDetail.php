@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\OrdersV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ProductInfoDetail extends Dto
+final class ProductInfoDetail extends BaseDto
 {
     protected static array $attributeMap = ['numberOfItems' => 'NumberOfItems'];
 

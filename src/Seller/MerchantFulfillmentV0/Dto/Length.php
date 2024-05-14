@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\MerchantFulfillmentV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class Length extends Dto
+final class Length extends BaseDto
 {
     /**
      * @param  ?float  $value  The value in units.

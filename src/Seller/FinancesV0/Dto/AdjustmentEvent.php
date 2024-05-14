@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FinancesV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class AdjustmentEvent extends Dto
+final class AdjustmentEvent extends BaseDto
 {
     protected static array $attributeMap = [
         'adjustmentType' => 'AdjustmentType',

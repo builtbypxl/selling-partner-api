@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\CatalogItemsV20220401\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ItemContributor extends Dto
+final class ItemContributor extends BaseDto
 {
     /**
      * @param  ItemContributorRole  $role  Role of an individual contributor in the creation of an item, such as author or actor.

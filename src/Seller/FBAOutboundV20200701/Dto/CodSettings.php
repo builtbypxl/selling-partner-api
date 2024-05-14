@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBAOutboundV20200701\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class CodSettings extends Dto
+final class CodSettings extends BaseDto
 {
     /**
      * @param  bool  $isCodRequired  When true, this fulfillment order requires a COD (Cash On Delivery) payment.

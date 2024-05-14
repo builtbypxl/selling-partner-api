@@ -1,13 +1,11 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\DataKioskV20231115\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Seller\DataKioskV20231115\Dto\Pagination;
 
-final class Query extends Response
+final class Query extends BaseResponse
 {
     /**
      * @param  string  $queryId  The query identifier. This identifier is unique only in combination with a selling partner account ID.

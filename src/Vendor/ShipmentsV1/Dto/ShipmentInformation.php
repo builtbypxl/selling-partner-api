@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\ShipmentsV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ShipmentInformation extends Dto
+final class ShipmentInformation extends BaseDto
 {
     /**
      * @param  ?VendorDetails  $vendorDetails  Vendor Details as part of Label response.

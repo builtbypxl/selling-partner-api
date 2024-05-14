@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\ShipmentsV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class TaxRegistrationDetails extends Dto
+final class TaxRegistrationDetails extends BaseDto
 {
     /**
      * @param  string  $taxRegistrationType  Tax registration type for the entity.

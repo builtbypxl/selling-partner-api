@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentSandboxV20211028\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 
-final class TransactionReference extends Response
+final class TransactionReference extends BaseResponse
 {
     /**
      * @param  ?string  $transactionId

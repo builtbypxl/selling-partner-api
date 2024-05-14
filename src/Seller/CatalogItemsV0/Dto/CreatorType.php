@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\CatalogItemsV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class CreatorType extends Dto
+final class CreatorType extends BaseDto
 {
     protected static array $attributeMap = ['role' => 'Role'];
 

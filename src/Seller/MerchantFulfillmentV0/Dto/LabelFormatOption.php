@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\MerchantFulfillmentV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class LabelFormatOption extends Dto
+final class LabelFormatOption extends BaseDto
 {
     protected static array $attributeMap = [
         'includePackingSlipWithLabel' => 'IncludePackingSlipWithLabel',

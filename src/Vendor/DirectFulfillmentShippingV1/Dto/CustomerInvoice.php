@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentShippingV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class CustomerInvoice extends Dto
+final class CustomerInvoice extends BaseDto
 {
     /**
      * @param  string  $purchaseOrderNumber  The purchase order number for this order.

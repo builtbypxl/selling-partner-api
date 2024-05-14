@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\CatalogItemsV20201201\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class Pagination extends Dto
+final class Pagination extends BaseDto
 {
     /**
      * @param  ?string  $nextToken  A token that can be used to fetch the next page.

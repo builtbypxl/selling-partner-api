@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentShippingV20211228\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ShipmentStatusUpdate extends Dto
+final class ShipmentStatusUpdate extends BaseDto
 {
     /**
      * @param  string  $purchaseOrderNumber  Purchase order number of the shipment for which to update the shipment status.

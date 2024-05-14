@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\SupplySourcesV20200701\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class CreateSupplySourceRequest extends Dto
+final class CreateSupplySourceRequest extends BaseDto
 {
     /**
      * @param  string  $supplySourceCode  The seller-provided unique supply source code.

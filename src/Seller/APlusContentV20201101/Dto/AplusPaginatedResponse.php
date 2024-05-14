@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\APlusContentV20201101\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class AplusPaginatedResponse extends Dto
+final class AplusPaginatedResponse extends BaseDto
 {
     protected static array $complexArrayTypes = ['warnings' => [Error::class]];
 

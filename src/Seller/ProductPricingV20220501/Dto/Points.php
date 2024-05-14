@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ProductPricingV20220501\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class Points extends Dto
+final class Points extends BaseDto
 {
     /**
      * @param  ?int  $pointsNumber  The number of points.

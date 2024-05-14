@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\OrdersV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ReceivingStatus extends Dto
+final class ReceivingStatus extends BaseDto
 {
     /**
      * @param  ?string  $receiveStatus  Receive status of the line item.

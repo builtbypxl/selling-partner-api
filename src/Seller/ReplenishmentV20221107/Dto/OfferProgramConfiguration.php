@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ReplenishmentV20221107\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class OfferProgramConfiguration extends Dto
+final class OfferProgramConfiguration extends BaseDto
 {
     /**
      * @param  ?OfferProgramConfigurationPreferences  $preferences  An object which contains the preferences applied to the offer.

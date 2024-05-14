@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentSandboxV20211028\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class TestCaseData extends Dto
+final class TestCaseData extends BaseDto
 {
     protected static array $complexArrayTypes = ['scenarios' => [Scenario::class]];
 

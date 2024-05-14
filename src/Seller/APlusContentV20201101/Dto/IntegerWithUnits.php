@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\APlusContentV20201101\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class IntegerWithUnits extends Dto
+final class IntegerWithUnits extends BaseDto
 {
     /**
      * @param  int  $value  The dimension value.

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\ShipmentsV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class CollectFreightPickupDetails extends Dto
+final class CollectFreightPickupDetails extends BaseDto
 {
     /**
      * @param  ?DateTime  $requestedPickUp  Date on which the items can be picked up from vendor warehouse by Buyer used for WePay/Collect vendors.

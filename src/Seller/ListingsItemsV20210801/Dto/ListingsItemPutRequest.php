@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ListingsItemsV20210801\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ListingsItemPutRequest extends Dto
+final class ListingsItemPutRequest extends BaseDto
 {
     /**
      * @param  string  $productType  The Amazon product type of the listings item.

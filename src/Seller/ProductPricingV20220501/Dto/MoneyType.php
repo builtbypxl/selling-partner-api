@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ProductPricingV20220501\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class MoneyType extends Dto
+final class MoneyType extends BaseDto
 {
     /**
      * @param  ?string  $currencyCode  The currency code in ISO 4217 format.

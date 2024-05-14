@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\OrdersV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class AutomatedShippingSettings extends Dto
+final class AutomatedShippingSettings extends BaseDto
 {
     protected static array $attributeMap = [
         'hasAutomatedShippingSettings' => 'HasAutomatedShippingSettings',

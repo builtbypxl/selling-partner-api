@@ -1,13 +1,11 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ReportsV20210630\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Traits\DownloadsDocument;
 
-final class ReportDocument extends Response
+final class ReportDocument extends BaseResponse
 {
     use DownloadsDocument;
 

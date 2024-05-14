@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ProductPricingV20220501\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class FeaturedOfferExpectedPriceRequestParams extends Dto
+final class FeaturedOfferExpectedPriceRequestParams extends BaseDto
 {
     /**
      * @param  string  $marketplaceId  A marketplace identifier. Specifies the marketplace for which data is returned.

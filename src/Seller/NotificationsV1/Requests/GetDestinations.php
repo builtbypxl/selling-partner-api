@@ -1,15 +1,13 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\NotificationsV1\Requests;
 
 use Exception;
 use Saloon\Enums\Method;
+use Saloon\Http\Request;
 use Saloon\Http\Response;
 use SellingPartnerApi\Enums\GrantlessScope;
 use SellingPartnerApi\Middleware\Grantless;
-use SellingPartnerApi\Request;
 use SellingPartnerApi\Seller\NotificationsV1\Responses\GetDestinationsResponse;
 
 /**

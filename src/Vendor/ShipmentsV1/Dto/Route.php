@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\ShipmentsV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class Route extends Dto
+final class Route extends BaseDto
 {
     protected static array $complexArrayTypes = ['stops' => [Stop::class]];
 

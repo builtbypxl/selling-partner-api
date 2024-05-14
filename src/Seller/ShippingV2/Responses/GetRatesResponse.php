@@ -1,13 +1,11 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ShippingV2\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Seller\ShippingV2\Dto\GetRatesResult;
 
-final class GetRatesResponse extends Response
+final class GetRatesResponse extends BaseResponse
 {
     /**
      * @param  ?GetRatesResult  $payload  The payload for the getRates operation.

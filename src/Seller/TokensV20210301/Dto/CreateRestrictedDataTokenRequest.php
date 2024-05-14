@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\TokensV20210301\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class CreateRestrictedDataTokenRequest extends Dto
+final class CreateRestrictedDataTokenRequest extends BaseDto
 {
     protected static array $complexArrayTypes = ['restrictedResources' => [RestrictedResource::class]];
 

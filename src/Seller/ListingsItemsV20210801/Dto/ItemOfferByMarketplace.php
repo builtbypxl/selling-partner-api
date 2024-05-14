@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ListingsItemsV20210801\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ItemOfferByMarketplace extends Dto
+final class ItemOfferByMarketplace extends BaseDto
 {
     /**
      * @param  string  $marketplaceId  Amazon marketplace identifier.

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ServicesV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class Payload extends Dto
+final class Payload extends BaseDto
 {
     protected static array $complexArrayTypes = ['warnings' => [Warning::class]];
 

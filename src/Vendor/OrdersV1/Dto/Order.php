@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\OrdersV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class Order extends Dto
+final class Order extends BaseDto
 {
     /**
      * @param  string  $purchaseOrderNumber  The purchase order number for this order. Formatting Notes: 8-character alpha-numeric code.

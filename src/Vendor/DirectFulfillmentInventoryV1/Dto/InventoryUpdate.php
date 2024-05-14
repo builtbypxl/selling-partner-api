@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentInventoryV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class InventoryUpdate extends Dto
+final class InventoryUpdate extends BaseDto
 {
     protected static array $complexArrayTypes = ['items' => [ItemDetails::class]];
 

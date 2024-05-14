@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ShipmentInvoicingV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class SubmitInvoiceRequest extends Dto
+final class SubmitInvoiceRequest extends BaseDto
 {
     protected static array $attributeMap = [
         'invoiceContent' => 'InvoiceContent',

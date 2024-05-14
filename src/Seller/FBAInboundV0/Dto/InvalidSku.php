@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBAInboundV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class InvalidSku extends Dto
+final class InvalidSku extends BaseDto
 {
     protected static array $attributeMap = ['sellerSku' => 'SellerSKU', 'errorReason' => 'ErrorReason'];
 

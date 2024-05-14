@@ -1,15 +1,13 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FeedsV20210630\Requests;
 
 use Exception;
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
+use Saloon\Http\Request;
 use Saloon\Http\Response;
 use Saloon\Traits\Body\HasJsonBody;
-use SellingPartnerApi\Request;
 use SellingPartnerApi\Seller\FeedsV20210630\Dto\CreateFeedDocumentSpecification;
 use SellingPartnerApi\Seller\FeedsV20210630\Responses\CreateFeedDocumentResponse;
 use SellingPartnerApi\Seller\FeedsV20210630\Responses\ErrorList;

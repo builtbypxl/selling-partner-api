@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\EasyShipV20220323\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 
-final class Packages extends Response
+final class Packages extends BaseResponse
 {
     protected static array $complexArrayTypes = ['packages' => [Package::class]];
 

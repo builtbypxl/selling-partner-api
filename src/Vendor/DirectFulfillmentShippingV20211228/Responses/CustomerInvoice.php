@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentShippingV20211228\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 
-final class CustomerInvoice extends Response
+final class CustomerInvoice extends BaseResponse
 {
     /**
      * @param  string  $purchaseOrderNumber  The purchase order number for this order.

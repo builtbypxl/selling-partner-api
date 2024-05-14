@@ -1,13 +1,11 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ListingsRestrictionsV20210801\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Seller\ListingsRestrictionsV20210801\Dto\Restriction;
 
-final class RestrictionList extends Response
+final class RestrictionList extends BaseResponse
 {
     protected static array $complexArrayTypes = ['restrictions' => [Restriction::class]];
 

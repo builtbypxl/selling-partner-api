@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentShippingV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class StatusUpdateDetails extends Dto
+final class StatusUpdateDetails extends BaseDto
 {
     /**
      * @param  string  $trackingNumber  This is required to be provided for every package and should match with the trackingNumber sent for the shipment confirmation.

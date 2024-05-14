@@ -1,13 +1,11 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\SupplySourcesV20200701\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Seller\SupplySourcesV20200701\Dto\SupplySourceList;
 
-final class GetSupplySourcesResponse extends Response
+final class GetSupplySourcesResponse extends BaseResponse
 {
     /**
      * @param  ?SupplySourceList  $supplySources

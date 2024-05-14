@@ -1,13 +1,11 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ServicesV1\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Seller\ServicesV1\Dto\RangeCapacity;
 
-final class FixedSlotCapacity extends Response
+final class FixedSlotCapacity extends BaseResponse
 {
     protected static array $complexArrayTypes = ['capacities' => [RangeCapacity::class]];
 

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\OrdersV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class OpenTimeInterval extends Dto
+final class OpenTimeInterval extends BaseDto
 {
     protected static array $attributeMap = ['hour' => 'Hour', 'minute' => 'Minute'];
 

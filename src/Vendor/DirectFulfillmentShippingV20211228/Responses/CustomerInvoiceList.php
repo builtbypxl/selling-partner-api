@@ -1,13 +1,12 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentShippingV20211228\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
+use SellingPartnerApi\Vendor\DirectFulfillmentShippingV20211228\Dto\CustomerInvoice;
 use SellingPartnerApi\Vendor\DirectFulfillmentShippingV20211228\Dto\Pagination;
 
-final class CustomerInvoiceList extends Response
+final class CustomerInvoiceList extends BaseResponse
 {
     protected static array $complexArrayTypes = ['customerInvoices' => [CustomerInvoice::class]];
 

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentOrdersV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ScheduledDeliveryShipment extends Dto
+final class ScheduledDeliveryShipment extends BaseDto
 {
     /**
      * @param  ?string  $scheduledDeliveryServiceType  Scheduled delivery service type.

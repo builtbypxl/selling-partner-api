@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\ShipmentsV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class InnerContainersDetails extends Dto
+final class InnerContainersDetails extends BaseDto
 {
     protected static array $complexArrayTypes = ['containerSequenceNumbers' => [ContainerSequenceNumbers::class]];
 

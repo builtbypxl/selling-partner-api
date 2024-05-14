@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\MerchantFulfillmentV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class CurrencyAmount extends Dto
+final class CurrencyAmount extends BaseDto
 {
     protected static array $attributeMap = ['currencyCode' => 'CurrencyCode', 'amount' => 'Amount'];
 

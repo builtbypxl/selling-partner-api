@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\OrdersV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class OrderItemAcknowledgement extends Dto
+final class OrderItemAcknowledgement extends BaseDto
 {
     /**
      * @param  string  $acknowledgementCode  This indicates the acknowledgement code.

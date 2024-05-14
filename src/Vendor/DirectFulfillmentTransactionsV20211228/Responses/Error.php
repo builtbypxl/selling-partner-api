@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentTransactionsV20211228\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 
-final class Error extends Response
+final class Error extends BaseResponse
 {
     /**
      * @param  string  $code  An error code that identifies the type of error that occurred.

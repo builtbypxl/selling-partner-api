@@ -1,13 +1,11 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\EasyShipV20220323\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Seller\EasyShipV20220323\Dto\RejectedOrder;
 
-final class CreateScheduledPackagesResponse extends Response
+final class CreateScheduledPackagesResponse extends BaseResponse
 {
     protected static array $complexArrayTypes = [
         'scheduledPackages' => [Package::class],

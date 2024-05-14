@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ListingsItemsV20210801\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ItemSummaryByMarketplace extends Dto
+final class ItemSummaryByMarketplace extends BaseDto
 {
     /**
      * @param  string  $marketplaceId  A marketplace identifier. Identifies the Amazon marketplace for the listings item.

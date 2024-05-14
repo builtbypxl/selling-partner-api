@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBAOutboundV20200701\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class SubmitFulfillmentOrderStatusUpdateRequest extends Dto
+final class SubmitFulfillmentOrderStatusUpdateRequest extends BaseDto
 {
     /**
      * @param  ?string  $fulfillmentOrderStatus  The current status of the fulfillment order.

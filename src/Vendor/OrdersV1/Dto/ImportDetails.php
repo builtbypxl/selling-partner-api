@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\OrdersV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ImportDetails extends Dto
+final class ImportDetails extends BaseDto
 {
     /**
      * @param  ?string  $methodOfPayment  If the recipient requests, contains the shipment method of payment. This is for import PO's only.

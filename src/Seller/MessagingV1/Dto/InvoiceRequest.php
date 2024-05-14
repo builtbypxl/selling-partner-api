@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\MessagingV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class InvoiceRequest extends Dto
+final class InvoiceRequest extends BaseDto
 {
     protected static array $complexArrayTypes = ['attachments' => [Attachment::class]];
 

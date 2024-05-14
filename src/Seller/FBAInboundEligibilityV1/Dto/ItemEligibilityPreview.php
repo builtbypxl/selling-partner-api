@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBAInboundEligibilityV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ItemEligibilityPreview extends Dto
+final class ItemEligibilityPreview extends BaseDto
 {
     /**
      * @param  string  $asin  The ASIN for which eligibility was determined.

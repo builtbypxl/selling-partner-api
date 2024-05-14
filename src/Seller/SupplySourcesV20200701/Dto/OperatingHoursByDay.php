@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\SupplySourcesV20200701\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class OperatingHoursByDay extends Dto
+final class OperatingHoursByDay extends BaseDto
 {
     protected static array $complexArrayTypes = [
         'monday' => [OperatingHour::class],

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ProductPricingV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ListingOffersRequest extends Dto
+final class ListingOffersRequest extends BaseDto
 {
     protected static array $attributeMap = [
         'marketplaceId' => 'MarketplaceId',

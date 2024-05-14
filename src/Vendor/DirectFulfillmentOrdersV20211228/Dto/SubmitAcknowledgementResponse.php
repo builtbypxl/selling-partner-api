@@ -1,14 +1,12 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentOrdersV20211228\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 use SellingPartnerApi\Vendor\DirectFulfillmentOrdersV20211228\Responses\ErrorList;
 use SellingPartnerApi\Vendor\DirectFulfillmentOrdersV20211228\Responses\TransactionId;
 
-final class SubmitAcknowledgementResponse extends Dto
+final class SubmitAcknowledgementResponse extends BaseDto
 {
     /**
      * @param  ?TransactionId  $payload

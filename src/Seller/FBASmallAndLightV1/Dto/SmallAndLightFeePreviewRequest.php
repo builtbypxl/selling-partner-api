@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBASmallAndLightV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class SmallAndLightFeePreviewRequest extends Dto
+final class SmallAndLightFeePreviewRequest extends BaseDto
 {
     protected static array $complexArrayTypes = ['items' => [Item::class]];
 

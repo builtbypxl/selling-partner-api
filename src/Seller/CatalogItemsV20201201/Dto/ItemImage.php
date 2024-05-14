@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\CatalogItemsV20201201\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ItemImage extends Dto
+final class ItemImage extends BaseDto
 {
     /**
      * @param  string  $variant  Variant of the image, such as MAIN or PT01.

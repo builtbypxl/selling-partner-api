@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBAInventoryV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class InventorySummary extends Dto
+final class InventorySummary extends BaseDto
 {
     /**
      * @param  ?string  $asin  The Amazon Standard Identification Number (ASIN) of an item.

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ShippingV2\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 
-final class GetAdditionalInputsResponse extends Response
+final class GetAdditionalInputsResponse extends BaseResponse
 {
     /**
      * @param  ?array[]  $payload  The JSON schema to use to provide additional inputs when required to purchase a shipping offering.

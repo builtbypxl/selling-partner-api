@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\SolicitationsV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class Embedded extends Dto
+final class Embedded extends BaseDto
 {
     protected static array $complexArrayTypes = ['actions' => [LinkObject::class]];
 

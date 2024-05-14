@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\CatalogItemsV20220401\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ItemIdentifier extends Dto
+final class ItemIdentifier extends BaseDto
 {
     /**
      * @param  string  $identifierType  Type of identifier, such as UPC, EAN, or ISBN.

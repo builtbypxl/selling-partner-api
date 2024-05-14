@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\OrdersV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class Address extends Dto
+final class Address extends BaseDto
 {
     /**
      * @param  string  $name  The name of the person, business or institution at that address.

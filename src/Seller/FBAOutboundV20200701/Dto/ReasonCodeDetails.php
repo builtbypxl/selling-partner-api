@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBAOutboundV20200701\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ReasonCodeDetails extends Dto
+final class ReasonCodeDetails extends BaseDto
 {
     /**
      * @param  string  $returnReasonCode  A code that indicates a valid return reason.

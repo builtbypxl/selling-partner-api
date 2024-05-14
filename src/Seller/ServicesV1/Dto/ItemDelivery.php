@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ServicesV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ItemDelivery extends Dto
+final class ItemDelivery extends BaseDto
 {
     /**
      * @param  ?DateTime  $estimatedDeliveryDate  The date and time of the latest Estimated Delivery Date (EDD) of all the items with an EDD. In ISO 8601 format.

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\TransactionStatusV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class TransactionStatus extends Dto
+final class TransactionStatus extends BaseDto
 {
     /**
      * @param  ?Transaction  $transactionStatus  The transaction status.

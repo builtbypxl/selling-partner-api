@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\OrdersV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class SubstitutionPreferences extends Dto
+final class SubstitutionPreferences extends BaseDto
 {
     protected static array $attributeMap = [
         'substitutionType' => 'SubstitutionType',

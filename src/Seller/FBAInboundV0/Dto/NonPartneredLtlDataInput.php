@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBAInboundV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class NonPartneredLtlDataInput extends Dto
+final class NonPartneredLtlDataInput extends BaseDto
 {
     protected static array $attributeMap = ['carrierName' => 'CarrierName', 'proNumber' => 'ProNumber'];
 

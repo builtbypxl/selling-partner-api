@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\SupplySourcesV20200701\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class Primary extends Dto
+final class Primary extends BaseDto
 {
     /**
      * @param  ?string  $email  The email address to which email messages are delivered.

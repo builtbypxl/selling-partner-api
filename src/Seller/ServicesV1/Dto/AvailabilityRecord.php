@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ServicesV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class AvailabilityRecord extends Dto
+final class AvailabilityRecord extends BaseDto
 {
     /**
      * @param  DateTime  $startTime  Denotes the time from when the resource is available in a day in ISO-8601 format.

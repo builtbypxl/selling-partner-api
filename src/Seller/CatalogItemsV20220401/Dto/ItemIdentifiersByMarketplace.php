@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\CatalogItemsV20220401\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ItemIdentifiersByMarketplace extends Dto
+final class ItemIdentifiersByMarketplace extends BaseDto
 {
     protected static array $complexArrayTypes = ['identifiers' => [ItemIdentifier::class]];
 

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentOrdersV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ShipmentDates extends Dto
+final class ShipmentDates extends BaseDto
 {
     /**
      * @param  DateTime  $requiredShipDate  Time by which the vendor is required to ship the order.

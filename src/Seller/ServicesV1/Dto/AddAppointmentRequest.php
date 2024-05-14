@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ServicesV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class AddAppointmentRequest extends Dto
+final class AddAppointmentRequest extends BaseDto
 {
     /**
      * @param  AppointmentTimeInput  $appointmentTime  The input appointment time details.

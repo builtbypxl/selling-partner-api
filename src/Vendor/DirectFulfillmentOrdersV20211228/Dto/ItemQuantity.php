@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentOrdersV20211228\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ItemQuantity extends Dto
+final class ItemQuantity extends BaseDto
 {
     /**
      * @param  ?int  $amount  Acknowledged quantity. This value should not be zero.

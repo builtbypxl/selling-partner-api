@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\APlusContentV20201101\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class TextComponent extends Dto
+final class TextComponent extends BaseDto
 {
     protected static array $complexArrayTypes = ['decoratorSet' => [Decorator::class]];
 

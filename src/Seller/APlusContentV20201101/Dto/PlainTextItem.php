@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\APlusContentV20201101\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class PlainTextItem extends Dto
+final class PlainTextItem extends BaseDto
 {
     /**
      * @param  int  $position  The rank or index of this text item within the collection. Different items cannot occupy the same position within a single collection.

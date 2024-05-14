@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBAOutboundV20200701\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class GetFeatureSkuResult extends Dto
+final class GetFeatureSkuResult extends BaseDto
 {
     /**
      * @param  string  $marketplaceId  The requested marketplace.

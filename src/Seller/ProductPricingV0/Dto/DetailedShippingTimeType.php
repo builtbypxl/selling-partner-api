@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ProductPricingV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class DetailedShippingTimeType extends Dto
+final class DetailedShippingTimeType extends BaseDto
 {
     /**
      * @param  ?int  $minimumHours  The minimum time, in hours, that the item will likely be shipped after the order has been placed.

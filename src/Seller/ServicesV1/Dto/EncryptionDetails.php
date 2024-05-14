@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ServicesV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class EncryptionDetails extends Dto
+final class EncryptionDetails extends BaseDto
 {
     /**
      * @param  string  $standard  The encryption standard required to encrypt or decrypt the document contents.

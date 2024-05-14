@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ShippingV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class LabelResult extends Dto
+final class LabelResult extends BaseDto
 {
     /**
      * @param  ?string  $containerReferenceId  An identifier for the container. This must be unique within all the containers in the same shipment.

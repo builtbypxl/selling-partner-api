@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBAInboundV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class AmazonPrepFeesDetails extends Dto
+final class AmazonPrepFeesDetails extends BaseDto
 {
     protected static array $attributeMap = ['prepInstruction' => 'PrepInstruction', 'feePerUnit' => 'FeePerUnit'];
 

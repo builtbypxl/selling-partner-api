@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBAOutboundV20200701\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ReturnAuthorization extends Dto
+final class ReturnAuthorization extends BaseDto
 {
     protected static array $attributeMap = ['rmaPageUrl' => 'rmaPageURL'];
 

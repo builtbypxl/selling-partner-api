@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\APlusContentV20201101\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class StandardMultipleImageTextModule extends Dto
+final class StandardMultipleImageTextModule extends BaseDto
 {
     protected static array $complexArrayTypes = ['blocks' => [StandardImageTextCaptionBlock::class]];
 

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ShippingV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ContainerItem extends Dto
+final class ContainerItem extends BaseDto
 {
     /**
      * @param  float  $quantity  The quantity of the items of this type in the container.

@@ -1,14 +1,12 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentShippingV1\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Vendor\DirectFulfillmentShippingV1\Dto\Error;
 use SellingPartnerApi\Vendor\DirectFulfillmentShippingV1\Dto\ShippingLabelList;
 
-final class GetShippingLabelListResponse extends Response
+final class GetShippingLabelListResponse extends BaseResponse
 {
     protected static array $complexArrayTypes = ['errors' => [Error::class]];
 

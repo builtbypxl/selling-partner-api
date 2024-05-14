@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ReplenishmentV20221107\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ListOffersResponseOffer extends Dto
+final class ListOffersResponseOffer extends BaseDto
 {
     /**
      * @param  ?string  $sku  The SKU. This property is only supported for sellers and not for vendors.

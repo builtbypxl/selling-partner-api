@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentOrdersV20211228\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class OrderAcknowledgementItem extends Dto
+final class OrderAcknowledgementItem extends BaseDto
 {
     protected static array $complexArrayTypes = ['itemAcknowledgements' => [OrderItemAcknowledgement::class]];
 

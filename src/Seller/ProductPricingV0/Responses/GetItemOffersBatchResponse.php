@@ -1,13 +1,11 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ProductPricingV0\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Seller\ProductPricingV0\Dto\ItemOffersResponse;
 
-final class GetItemOffersBatchResponse extends Response
+final class GetItemOffersBatchResponse extends BaseResponse
 {
     protected static array $complexArrayTypes = ['responses' => [ItemOffersResponse::class]];
 

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ProductTypeDefinitionsV20200901\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class SchemaLink extends Dto
+final class SchemaLink extends BaseDto
 {
     /**
      * @param  Link  $link  Link to retrieve the schema.

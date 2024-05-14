@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ListingsItemsV20200901\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class Issue extends Dto
+final class Issue extends BaseDto
 {
     /**
      * @param  string  $code  An issue code that identifies the type of issue.

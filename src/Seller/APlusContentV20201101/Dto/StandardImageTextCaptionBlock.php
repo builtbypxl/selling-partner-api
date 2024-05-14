@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\APlusContentV20201101\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class StandardImageTextCaptionBlock extends Dto
+final class StandardImageTextCaptionBlock extends BaseDto
 {
     /**
      * @param  ?StandardImageTextBlock  $block  The A+ Content standard image and text box block.

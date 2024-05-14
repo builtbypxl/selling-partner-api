@@ -1,15 +1,13 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ProductTypeDefinitionsV20200901\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Seller\ProductTypeDefinitionsV20200901\Dto\ProductTypeVersion;
 use SellingPartnerApi\Seller\ProductTypeDefinitionsV20200901\Dto\PropertyGroup;
 use SellingPartnerApi\Seller\ProductTypeDefinitionsV20200901\Dto\SchemaLink;
 
-final class ProductTypeDefinition extends Response
+final class ProductTypeDefinition extends BaseResponse
 {
     protected static array $complexArrayTypes = ['propertyGroups' => [PropertyGroup::class]];
 

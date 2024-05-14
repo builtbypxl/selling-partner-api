@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBAOutboundV20200701\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class FulfillmentShipmentPackage extends Dto
+final class FulfillmentShipmentPackage extends BaseDto
 {
     /**
      * @param  int  $packageNumber  Identifies a package in a shipment.

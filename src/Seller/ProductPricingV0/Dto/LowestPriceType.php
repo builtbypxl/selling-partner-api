@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ProductPricingV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class LowestPriceType extends Dto
+final class LowestPriceType extends BaseDto
 {
     protected static array $attributeMap = [
         'listingPrice' => 'ListingPrice',

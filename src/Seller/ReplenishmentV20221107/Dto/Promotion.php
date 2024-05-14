@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ReplenishmentV20221107\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class Promotion extends Dto
+final class Promotion extends BaseDto
 {
     /**
      * @param  ?DiscountFunding  $sellingPartnerFundedBaseDiscount  The discount funding on the offer.

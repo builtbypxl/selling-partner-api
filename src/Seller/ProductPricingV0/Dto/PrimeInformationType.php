@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ProductPricingV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class PrimeInformationType extends Dto
+final class PrimeInformationType extends BaseDto
 {
     protected static array $attributeMap = ['isPrime' => 'IsPrime', 'isNationalPrime' => 'IsNationalPrime'];
 

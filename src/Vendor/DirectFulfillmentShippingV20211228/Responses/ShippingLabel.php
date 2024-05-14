@@ -1,14 +1,12 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentShippingV20211228\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Vendor\DirectFulfillmentShippingV20211228\Dto\LabelData;
 use SellingPartnerApi\Vendor\DirectFulfillmentShippingV20211228\Dto\PartyIdentification;
 
-final class ShippingLabel extends Response
+final class ShippingLabel extends BaseResponse
 {
     protected static array $complexArrayTypes = ['labelData' => [LabelData::class]];
 

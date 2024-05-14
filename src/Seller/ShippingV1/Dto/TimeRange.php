@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ShippingV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class TimeRange extends Dto
+final class TimeRange extends BaseDto
 {
     /**
      * @param  ?DateTime  $start  The start date and time. This defaults to the current date and time.

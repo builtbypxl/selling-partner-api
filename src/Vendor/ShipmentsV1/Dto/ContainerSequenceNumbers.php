@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\ShipmentsV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ContainerSequenceNumbers extends Dto
+final class ContainerSequenceNumbers extends BaseDto
 {
     /**
      * @param  ?string  $containerSequenceNumber  A list of containers shipped

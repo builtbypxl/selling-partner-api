@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\ShipmentsV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class CarrierDetails extends Dto
+final class CarrierDetails extends BaseDto
 {
     /**
      * @param  ?string  $name  The field is used to represent the carrier used for performing the shipment.

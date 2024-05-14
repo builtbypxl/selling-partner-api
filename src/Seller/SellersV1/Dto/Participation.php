@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\SellersV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class Participation extends Dto
+final class Participation extends BaseDto
 {
     /**
      * @param  bool  $hasSuspendedListings  Specifies if the seller has suspended listings. True if the seller Listing Status is set to Inactive, otherwise False.

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\SupplySourcesV20200701\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class PickupChannel extends Dto
+final class PickupChannel extends BaseDto
 {
     /**
      * @param  ?Duration  $inventoryHoldPeriod  The duration of time.

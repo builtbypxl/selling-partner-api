@@ -1,14 +1,12 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\APlusContentV20201101\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Seller\APlusContentV20201101\Dto\ContentMetadataRecord;
 use SellingPartnerApi\Seller\APlusContentV20201101\Dto\Error;
 
-final class SearchContentDocumentsResponse extends Response
+final class SearchContentDocumentsResponse extends BaseResponse
 {
     protected static array $complexArrayTypes = [
         'contentMetadataRecords' => [ContentMetadataRecord::class],

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentOrdersV20211228\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class TaxDetails extends Dto
+final class TaxDetails extends BaseDto
 {
     /**
      * @param  Money  $taxAmount  An amount of money, including units in the form of currency.

@@ -1,10 +1,8 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\EasyShipV20220323\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Seller\EasyShipV20220323\Dto\Dimensions;
 use SellingPartnerApi\Seller\EasyShipV20220323\Dto\InvoiceData;
 use SellingPartnerApi\Seller\EasyShipV20220323\Dto\Item;
@@ -13,7 +11,7 @@ use SellingPartnerApi\Seller\EasyShipV20220323\Dto\TimeSlot;
 use SellingPartnerApi\Seller\EasyShipV20220323\Dto\TrackingDetails;
 use SellingPartnerApi\Seller\EasyShipV20220323\Dto\Weight;
 
-final class Package extends Response
+final class Package extends BaseResponse
 {
     protected static array $complexArrayTypes = ['packageItems' => [Item::class]];
 

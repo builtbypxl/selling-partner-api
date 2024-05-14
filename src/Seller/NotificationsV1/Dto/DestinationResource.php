@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\NotificationsV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class DestinationResource extends Dto
+final class DestinationResource extends BaseDto
 {
     /**
      * @param  ?SqsResource  $sqs  The information required to create an Amazon Simple Queue Service (Amazon SQS) queue destination.

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentSandboxV20211028\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class Transaction extends Dto
+final class Transaction extends BaseDto
 {
     /**
      * @param  string  $transactionId  The unique identifier returned in the response to the generateOrderScenarios request.

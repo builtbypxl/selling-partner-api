@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\OrdersV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class BuyerRequestedCancel extends Dto
+final class BuyerRequestedCancel extends BaseDto
 {
     protected static array $attributeMap = [
         'isBuyerRequestedCancel' => 'IsBuyerRequestedCancel',

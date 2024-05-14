@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\MerchantFulfillmentV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class LabelDimensions extends Dto
+final class LabelDimensions extends BaseDto
 {
     protected static array $attributeMap = ['length' => 'Length', 'width' => 'Width', 'unit' => 'Unit'];
 

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ReplenishmentV20221107\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class OfferProgramConfigurationPromotionsDiscountFunding extends Dto
+final class OfferProgramConfigurationPromotionsDiscountFunding extends BaseDto
 {
     /**
      * @param  ?float  $percentage  The percentage discount on the offer.

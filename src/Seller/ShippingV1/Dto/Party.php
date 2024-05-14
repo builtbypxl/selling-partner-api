@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ShippingV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class Party extends Dto
+final class Party extends BaseDto
 {
     /**
      * @param  ?string  $accountId  This is the Amazon Shipping account id generated during the Amazon Shipping onboarding process.

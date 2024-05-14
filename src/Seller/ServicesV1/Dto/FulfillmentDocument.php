@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ServicesV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class FulfillmentDocument extends Dto
+final class FulfillmentDocument extends BaseDto
 {
     /**
      * @param  ?string  $uploadDestinationId  The identifier of the upload destination. Get this value by calling the `createServiceDocumentUploadDestination` operation of the Services API.

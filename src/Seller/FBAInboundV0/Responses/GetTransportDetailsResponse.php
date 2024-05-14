@@ -1,14 +1,12 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBAInboundV0\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Seller\FBAInboundV0\Dto\Error;
 use SellingPartnerApi\Seller\FBAInboundV0\Dto\GetTransportDetailsResult;
 
-final class GetTransportDetailsResponse extends Response
+final class GetTransportDetailsResponse extends BaseResponse
 {
     protected static array $complexArrayTypes = ['errors' => [Error::class]];
 

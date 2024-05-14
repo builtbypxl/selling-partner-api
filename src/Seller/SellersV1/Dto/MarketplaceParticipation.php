@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\SellersV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class MarketplaceParticipation extends Dto
+final class MarketplaceParticipation extends BaseDto
 {
     /**
      * @param  Marketplace  $marketplace  Detailed information about an Amazon market where a seller can list items for sale and customers can view and purchase items.

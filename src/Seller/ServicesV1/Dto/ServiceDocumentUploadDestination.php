@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ServicesV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ServiceDocumentUploadDestination extends Dto
+final class ServiceDocumentUploadDestination extends BaseDto
 {
     /**
      * @param  string  $uploadDestinationId  The unique identifier to be used by APIs that reference the upload destination.

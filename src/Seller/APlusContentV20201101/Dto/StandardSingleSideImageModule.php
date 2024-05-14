@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\APlusContentV20201101\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class StandardSingleSideImageModule extends Dto
+final class StandardSingleSideImageModule extends BaseDto
 {
     /**
      * @param  string  $imagePositionType  The relative positioning of content.

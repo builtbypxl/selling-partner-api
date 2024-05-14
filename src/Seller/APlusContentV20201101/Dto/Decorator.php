@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\APlusContentV20201101\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class Decorator extends Dto
+final class Decorator extends BaseDto
 {
     /**
      * @param  ?string  $type  The type of rich text decorator.

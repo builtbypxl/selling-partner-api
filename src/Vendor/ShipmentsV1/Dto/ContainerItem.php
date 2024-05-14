@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\ShipmentsV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ContainerItem extends Dto
+final class ContainerItem extends BaseDto
 {
     /**
      * @param  string  $itemReference  The reference number for the item. Please provide the itemSequenceNumber from the 'items' segment to refer to that item's details here.

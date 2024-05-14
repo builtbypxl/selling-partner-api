@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ProductPricingV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class GetItemOffersBatchRequest extends Dto
+final class GetItemOffersBatchRequest extends BaseDto
 {
     protected static array $complexArrayTypes = ['requests' => [ItemOffersRequest::class]];
 

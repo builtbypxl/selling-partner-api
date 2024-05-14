@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBAInventoryV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class UnfulfillableQuantity extends Dto
+final class UnfulfillableQuantity extends BaseDto
 {
     /**
      * @param  ?int  $totalUnfulfillableQuantity  The total number of units in Amazon's fulfillment network in unsellable condition.

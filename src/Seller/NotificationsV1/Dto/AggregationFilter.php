@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\NotificationsV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class AggregationFilter extends Dto
+final class AggregationFilter extends BaseDto
 {
     /**
      * @param  ?AggregationSettings  $aggregationSettings  A container that holds all of the necessary properties to configure the aggregation of notifications.

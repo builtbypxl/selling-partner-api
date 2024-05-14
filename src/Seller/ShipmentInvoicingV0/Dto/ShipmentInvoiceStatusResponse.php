@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ShipmentInvoicingV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ShipmentInvoiceStatusResponse extends Dto
+final class ShipmentInvoiceStatusResponse extends BaseDto
 {
     protected static array $attributeMap = ['shipments' => 'Shipments'];
 

@@ -1,13 +1,11 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\DataKioskV20231115\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Seller\DataKioskV20231115\Dto\Pagination;
 
-final class GetQueriesResponse extends Response
+final class GetQueriesResponse extends BaseResponse
 {
     protected static array $complexArrayTypes = ['queries' => [Query::class]];
 

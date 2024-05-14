@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FinancesV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class TaxWithholdingPeriod extends Dto
+final class TaxWithholdingPeriod extends BaseDto
 {
     protected static array $attributeMap = ['startDate' => 'StartDate', 'endDate' => 'EndDate'];
 

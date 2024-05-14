@@ -1,13 +1,11 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBASmallAndLightV1\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Seller\FBASmallAndLightV1\Dto\FeePreview;
 
-final class SmallAndLightFeePreviews extends Response
+final class SmallAndLightFeePreviews extends BaseResponse
 {
     protected static array $complexArrayTypes = ['data' => [FeePreview::class]];
 

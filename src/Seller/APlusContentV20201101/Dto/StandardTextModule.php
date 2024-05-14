@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\APlusContentV20201101\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class StandardTextModule extends Dto
+final class StandardTextModule extends BaseDto
 {
     /**
      * @param  ParagraphComponent  $body  A list of rich text content, usually presented in a text box.

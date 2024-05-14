@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ProductPricingV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class GetOffersHttpStatusLine extends Dto
+final class GetOffersHttpStatusLine extends BaseDto
 {
     /**
      * @param  ?int  $statusCode  The HTTP response Status Code.

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\APlusContentV20201101\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class StandardImageTextOverlayModule extends Dto
+final class StandardImageTextOverlayModule extends BaseDto
 {
     /**
      * @param  string  $overlayColorType  The relative color scheme of content.

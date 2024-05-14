@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ReplenishmentV20221107\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ListOffersRequestPagination extends Dto
+final class ListOffersRequestPagination extends BaseDto
 {
     /**
      * @param  int  $limit  The maximum number of results to return in the response.

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ServicesV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class AssignAppointmentResourcesRequest extends Dto
+final class AssignAppointmentResourcesRequest extends BaseDto
 {
     protected static array $complexArrayTypes = ['resources' => [AppointmentResource::class]];
 

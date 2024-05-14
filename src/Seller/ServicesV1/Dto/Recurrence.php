@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ServicesV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class Recurrence extends Dto
+final class Recurrence extends BaseDto
 {
     /**
      * @param  DateTime  $endTime  End time of the recurrence.

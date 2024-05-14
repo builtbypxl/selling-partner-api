@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\CatalogItemsV0\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class AsinIdentifier extends Dto
+final class AsinIdentifier extends BaseDto
 {
     protected static array $attributeMap = ['marketplaceId' => 'MarketplaceId', 'asin' => 'ASIN'];
 

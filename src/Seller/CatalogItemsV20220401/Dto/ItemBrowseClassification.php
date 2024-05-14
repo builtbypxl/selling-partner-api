@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\CatalogItemsV20220401\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ItemBrowseClassification extends Dto
+final class ItemBrowseClassification extends BaseDto
 {
     /**
      * @param  string  $displayName  Display name for the classification.

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ReplenishmentV20221107\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class DiscountFunding extends Dto
+final class DiscountFunding extends BaseDto
 {
     /**
      * @param  float[]|null  $percentage  Filters the results to only include offers with the percentage specified.

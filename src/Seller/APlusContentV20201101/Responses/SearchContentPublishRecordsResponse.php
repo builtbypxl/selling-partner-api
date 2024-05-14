@@ -1,14 +1,12 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\APlusContentV20201101\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Seller\APlusContentV20201101\Dto\Error;
 use SellingPartnerApi\Seller\APlusContentV20201101\Dto\PublishRecord;
 
-final class SearchContentPublishRecordsResponse extends Response
+final class SearchContentPublishRecordsResponse extends BaseResponse
 {
     protected static array $complexArrayTypes = [
         'publishRecordList' => [PublishRecord::class],

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\APlusContentV20201101\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class ContentModule extends Dto
+final class ContentModule extends BaseDto
 {
     /**
      * @param  string  $contentModuleType  The type of A+ Content module.

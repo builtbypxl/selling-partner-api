@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ProductPricingV20220501\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class FeaturedOfferExpectedPriceResponseBody extends Dto
+final class FeaturedOfferExpectedPriceResponseBody extends BaseDto
 {
     protected static array $complexArrayTypes = [
         'featuredOfferExpectedPriceResults' => [FeaturedOfferExpectedPriceResult::class],

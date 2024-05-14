@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ShippingV2\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class DocumentSize extends Dto
+final class DocumentSize extends BaseDto
 {
     /**
      * @param  float  $width  The width of the document measured in the units specified.

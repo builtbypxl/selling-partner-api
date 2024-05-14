@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentShippingV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class PackingSlip extends Dto
+final class PackingSlip extends BaseDto
 {
     /**
      * @param  string  $purchaseOrderNumber  Purchase order number of the shipment that corresponds to the packing slip.

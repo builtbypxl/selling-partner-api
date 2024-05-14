@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\CatalogItemsV20201201\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class Refinements extends Dto
+final class Refinements extends BaseDto
 {
     protected static array $complexArrayTypes = [
         'brands' => [BrandRefinement::class],

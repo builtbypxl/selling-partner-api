@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentInventoryV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class SubmitInventoryUpdateRequest extends Dto
+final class SubmitInventoryUpdateRequest extends BaseDto
 {
     /**
      * @param  ?InventoryUpdate  $inventory

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\EasyShipV20220323\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class UpdatePackageDetails extends Dto
+final class UpdatePackageDetails extends BaseDto
 {
     /**
      * @param  ScheduledPackageId  $scheduledPackageId  Identifies the scheduled package to be updated.

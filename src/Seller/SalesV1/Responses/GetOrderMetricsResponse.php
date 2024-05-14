@@ -1,14 +1,12 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\SalesV1\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Seller\SalesV1\Dto\Error;
 use SellingPartnerApi\Seller\SalesV1\Dto\OrderMetricsInterval;
 
-final class GetOrderMetricsResponse extends Response
+final class GetOrderMetricsResponse extends BaseResponse
 {
     protected static array $complexArrayTypes = ['payload' => [OrderMetricsInterval::class], 'errors' => [Error::class]];
 

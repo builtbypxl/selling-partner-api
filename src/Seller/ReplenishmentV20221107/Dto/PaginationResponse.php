@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ReplenishmentV20221107\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class PaginationResponse extends Dto
+final class PaginationResponse extends BaseDto
 {
     /**
      * @param  ?int  $totalResults  Total number of results matching the given filter criteria.

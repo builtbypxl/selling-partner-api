@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ShippingV2\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class RequestedDocumentSpecification extends Dto
+final class RequestedDocumentSpecification extends BaseDto
 {
     /**
      * @param  string  $format  The file format of the document.

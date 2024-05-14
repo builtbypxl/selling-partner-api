@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\FBAOutboundV20200701\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class UpdateFulfillmentOrderItem extends Dto
+final class UpdateFulfillmentOrderItem extends BaseDto
 {
     /**
      * @param  string  $sellerFulfillmentOrderItemId  Identifies the fulfillment order item to update. Created with a previous call to the createFulfillmentOrder operation.

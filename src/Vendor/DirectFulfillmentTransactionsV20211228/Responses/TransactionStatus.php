@@ -1,13 +1,11 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Vendor\DirectFulfillmentTransactionsV20211228\Responses;
 
-use SellingPartnerApi\Response;
+use Crescat\SaloonSdkGenerator\BaseResponse;
 use SellingPartnerApi\Vendor\DirectFulfillmentTransactionsV20211228\Dto\Transaction;
 
-final class TransactionStatus extends Response
+final class TransactionStatus extends BaseResponse
 {
     /**
      * @param  ?Transaction  $transactionStatus  The transaction status details.

@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SellingPartnerApi\Seller\ShippingV1\Dto;
 
-use SellingPartnerApi\Dto;
+use Crescat\SaloonSdkGenerator\BaseDto;
 
-final class RetrieveShippingLabelRequest extends Dto
+final class RetrieveShippingLabelRequest extends BaseDto
 {
     /**
      * @param  LabelSpecification  $labelSpecification  The label specification info.
