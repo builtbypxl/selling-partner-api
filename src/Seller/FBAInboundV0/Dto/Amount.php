@@ -12,7 +12,6 @@ final class Amount extends Dto
 
     /**
      * @param  string  $currencyCode  The currency code.
-     * @param  float  $value  Number format that supports decimal.
      */
     public function __construct(
         public readonly string $currencyCode,

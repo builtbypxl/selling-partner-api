@@ -13,7 +13,7 @@ final class GetBillOfLadingResponse extends Response
     protected static array $complexArrayTypes = ['errors' => [Error::class]];
 
     /**
-     * @param  ?BillOfLadingDownloadUrl  $payload  Download URL for the bill of lading.
+     * @param  ?BillOfLadingDownloadUrl  $payload
      * @param  Error[]|null  $errors  A list of error responses returned when a request is unsuccessful.
      */
     public function __construct(

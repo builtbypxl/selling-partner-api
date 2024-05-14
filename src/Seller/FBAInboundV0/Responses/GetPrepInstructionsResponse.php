@@ -13,7 +13,7 @@ final class GetPrepInstructionsResponse extends Response
     protected static array $complexArrayTypes = ['errors' => [Error::class]];
 
     /**
-     * @param  ?GetPrepInstructionsResult  $payload  Result for the get prep instructions operation
+     * @param  ?GetPrepInstructionsResult  $payload
      * @param  Error[]|null  $errors  A list of error responses returned when a request is unsuccessful.
      */
     public function __construct(
